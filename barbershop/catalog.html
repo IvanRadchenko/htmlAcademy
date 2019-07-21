@@ -33,14 +33,17 @@
     </nav>
   </header>
 
-  <section class="catalog__block">
-    <h1 class="catalog__title">Some stuff to purchase</h1>
-    <ul class="breadcrumbs">
-      <li><a href="http://">All</a></li>
-      <li><a href="http://">Shop</a></li>
-      <li class="breadcrumbs_active"><a href=" http://">Stuff to buy</a> </li>
-    </ul>
-  </section>
+  <section class="main">
+
+   <section class="breadcrumbs">
+     <h1 class="breadcrumbs__title">Some stuff to purchase</h1>
+     <ul class="breadcrumbs__list">
+       <li class="breadcrumbs__item"><a href="http://">All</a></li>
+       <li class="breadcrumbs__item"><a href="http://">Shop</a></li>
+       <li class="breadcrumbs__item breadcrumbs_active"><a href="http://">{breadcrumbs__title}></a></li>
+     </ul>
+   </section>
+
 
   <aside class="filters">
     <div class="filters__companies">
@@ -167,6 +170,7 @@
       </ul>
     </div>
   </section>
+
 
   <footer class="footer">
     <address class="footer__address">
