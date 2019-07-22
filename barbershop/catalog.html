@@ -49,27 +49,57 @@
     <div class="filters__companies">
       <h2>Products</h2>
       <!-- Form -->
-      <!-- <ul>
-        <li><input type="checkbox" name="" id=""></li>
-        <li><input type="checkbox" name="" id=""></li>
-        <li><input type="checkbox" name="" id=""></li>
-        <li><input type="checkbox" name="" id=""></li>
-        <li><input type="checkbox" name="" id=""></li>
-        <li><input type="checkbox" name="" id=""></li>
-      </ul> -->
-    </div>
+      <form method="get" action="#" class="filter">
+        <fieldset>
+          <legend>Brands:</legend>
+              <ul>
+                <li class="filter__option">
+                  <input class="hidden filter__input finter__input_checkbox" type="checkbox" name="baxter-california" id="filter-baxter" checked>
+                  <label for="filter-baxter">Baxter of California</label>
+                </li>
+                <li class="filter__option">
+                  <input class="hidden filter__input finter__input_checkbox" type="checkbox" name="mr-natty" id="filter-natty">
+                  <label for="filter-natty">Mr Natty</label>
+                </li>
+                <li class="filter__option">
+                  <input class="hidden filter__input finter__input_checkbox" type="checkbox" name="suavecito" id="filter-suavetico" checked>
+                  <label for="filter-suavetico">Suavecito</label>
+                </li>
+                <li class="filter__option">
+                  <input class="hidden filter__input finter__input_checkbox" type="checkbox" name="malin-goetz" id="filter-malin-goetz">
+                  <label for="filter-malin-goetz">Malin + Goetz</label>
+                </li>
+                <li class="filter__option">
+                  <input class="hidden filter__input finter__input_checkbox" type="checkbox" name="murray" id="filter-murray">
+                  <label for="filter-murray">Murray's</label>
+                </li>
+                <li class="filter__option">
+                  <input class="hidden filter__input finter__input_checkbox" type="checkbox" name="american-crew" id="filter-american-crew" checked>
+                  <label for="filter-american-crew">American Crew</label>
+                </li>
+              </ul>
+        </fieldset>
 
-    <div class="filters__item-type">
-      <h2>Product Groups</h2>
-      <!-- //Form -->
-      <!-- <ul>
-        <li><input type="radio" name="" id=""></li>
-        <li><input type="radio" name="" id=""></li>
-        <li><input type="radio" name="" id=""></li>
-      </ul> -->
-    </div>
+        <fieldset>
+           <legend>Product Groups:</legend>
+           <ul>
+              <li class="filter__option">
+                <input class="hidden filter__input finter__input_radio" type="radio" name="product=group" id="filter-shave" >
+                <label for="filter-shave">Shave stuff</label>
+              </li>
+              <li class="filter__option">
+                <input class="hidden filter__input finter__input_radio" type="radio" name="product=group" id="filter-care">
+                <label for="filter-care">Care stuff</label>
+              </li>
+              <li class="filter__option">
+                <input class="hidden filter__input finter__input_radio" type="radio" name="product=group" id="filter-accessories" >
+                <label for="filter-accessories">Men's accessories</label>
+              </li>
+           </ul>
+        </fieldset>
 
-    <!-- <span class="btn">Apply</span> -->
+        <button type="submit" class="filter-btn btn">Filter</button>
+      </form>
 
   </aside>
 
