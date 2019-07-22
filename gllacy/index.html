@@ -45,22 +45,29 @@
       <p>8 812 450-25-25</p>
     </div>
 
-      <!-- //Hidden elements -->
-      <div class="search-box search_hidden">
+      <!-- Search box -->
+      <div class="search-box hidden">
         <input type="text" id="mySearch" onkeyup="searchFruitIce()" placeholder="Search..." title="Type in an icecream">
       </div>
 
-      <form class="login login_hidden" action="post">
-        <input type="email" placeholder="Enter Email" name="email" required>
-        <label for="email">Email</label>
+      <!-- Login form -->
+      <form class="login hidden" action="#" method="post">
+        <p class="login__item">
+          <input id="login-email" type="email" placeholder="Enter Email" name="email" required>
+          <label for="login-email">Email</label>
+        </p>
 
-        <input type="password" placeholder="Enter password" name="psw" required>
-        <label for="psw">Password</label>
+        <p class="login__item">
+          <input id="login-pws" type="password" placeholder="Enter password" name="psw" required>
+          <label for="login-psw">Password</label>
+        </p>
 
-        <button type="submit">Login</button>
-        <a href="#">Forgot password</a>
-        <a href="#">Create account</a>
+        <button type="submit" class="btn">Login</button>
 
+        <p class="login__item">
+          <a class="login__link" href="#">Forgot password</a>
+          <a class="login__link" href="#">Create account</a>
+        </p>
       </form>
 
   </header>
