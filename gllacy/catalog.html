@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Gllacy</title>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+
+      <a class="logo" href="http://">
+        <img src="" alt="">
+      </a>
+
+      <ul class="nav__list">
+        <li class="nav__item"><a href="http://">Catalog</a>
+          <ul class="nav__list_nested nav__list_hidden">
+            <li class="nav__item"><a href="http://">New picks</a></li>
+            <li class="nav__item"><a href="http://">Cream</a></li>
+            <li class="nav__item"><a href="http://">Cream</a></li>
+            <li class="nav__item"><a href="http://">Cream</a></li>
+            <li class="nav__item"><a href="http://">Cream</a></li>
+          </ul>
+        </li>
+        <li class="nav__item"><a href="http://">Transport</a></li>
+        <li class="nav__item"><a href="http://">About company</a></li>
+      </ul>
+
+
+      <div class="user">
+        <ul class="user__list">
+          <li class="user__item search"><a href="http://"></a></li>
+          <li class="user__item login"><a href="http://">Login</a></li>
+          <li class="user__item basket"><a href="http://">Basket</a></li>
+        </ul>
+      </div>
+
+    </nav>
+
+    <div>
+      <p>С 10 до 20, ежедневно</p>
+      <p>8 812 450-25-25</p>
+    </div>
+
+    <!-- //Hidden elements -->
+    <div class="search-box search_hidden">
+      <input type="text" id="mySearch" onkeyup="searchFruitIce()" placeholder="Search..." title="Type in an icecream">
+    </div>
+
+    <form class="login login_hidden" action="post">
+      <input type="email" placeholder="Enter Email" name="email" required autocomplete="email" autofocus>
+      <label for="email">Email</label>
+
+      <input type="password" placeholder="Enter password" name="psw" autocomplete="current-password" required>
+      <label for="psw">Password</label>
+
+      <button type="submit">Login</button>
+      <a href="http://">Forgot password</a>
+      <a href="http://">Create account</a>
+
+    </form>
+
+
+
+  </header>
+
+  <section class="main">
+
+    <section class="breadcrumbs">
+      <ul>
+        <li>Home</li>
+        <li>Catalog</li>
+        <li>Sugar Free</li>
+      </ul>
+    </section>
+
+    <h1>Sugar Free Icecream</h1>
+
+    <section class="filters">
+      <form action="" post="get">
+      <div class="sort">
+        <label for="popularity">Sort</label>
+        <select id="popularity">
+          <option value="">by popularity</option>
+          <option value="for savers">for savers</option>
+          <option value="expensive first">expensive first</option>
+          <option value="by calories">by calories</option>
+        </select>
+
+      </div>
+
+      <div>
+        <p>Price range</p>
+         <div class="range-slider">
+          <span class="rangeValues"></span>
+          <input value="500" min="100" max="5000" step="100" type="range">
+          <input value="50000" min="100" max="5000" step="100" type="range">
+         </div>
+      </div>
+
+      <div>
+        <p>Calories</p>
+          <input type="radio" name="caliries" id="0" value="0%">0%
+          <input type="radio" name="caliries" id="10" value="Up to 10%">Up to 10%
+          <input type="radio" name="caliries" id="30" value="Up to 30%">Up to 30%
+          <input type="radio" name="caliries" id="31" value="Above 30%">Above 30%
+      </div>
+
+      <div>
+        <p>Icecream with Guts</p>
+          <input type="checkbox" name="chocolate" id="">chocolate
+          <input type="checkbox" name="sugar soap" id="">sugar soap
+          <input type="checkbox" name="fruity" id="">fruity
+          <input type="checkbox" name="syrop" id="">syrop
+          <input type="checkbox" name="jem" id="">jem
+      </div>
+
+      <input type="submit" value="Apply">
+      </form>
+    </section>
+
+    <section class="product-list">
+      <div class="product-list__item">
+        <img src="" alt="" width="200px" height="200px">
+        <p class="product-list__price">310 /кг</p>
+        <p class="product-list__title">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+        <span class="btn btn_add btn_hidden">Add to basket</span>
+      </div>
+      <div class="product-list__item">
+        <img src="" alt="" width="200px" height="200px">
+        <p class="product-list__price">380 /кг</p>
+        <p class="product-list__title">Сливочно-кофейное с кусочками шоколада</p>
+        <span class="btn btn_add btn_hidden">Add to basket</span>
+      </div>
+      <div class="product-list__item">
+        <img src="" alt="" width="200px" height="200px">
+        <p class="product-list__price">355 /кг</p>
+        <p class="product-list__title">Сливочно-клубничное с присыпкой из белого шоколада</p>
+        <span class="btn btn_add btn_hidden">Add to basket</span>
+      </div>
+      <div class="product-list__item">
+        <img src="" alt="" width="200px" height="200px">
+        <p class="product-list__price">415 /кг</p>
+        <p class="product-list__title">Сливочное крем-брюле с карамельной подливкой</p>
+        <span class="btn btn_add btn_hidden">Add to basket</span>
+      </div>
+      <div class="product-list__item">
+        <img src="" alt="" width="200px" height="200px">
+        <p class="product-list__price">415 /кг</p>
+        <p class="product-list__title">Сливочное крем-брюле с карамельной подливкой</p>
+        <span class="btn btn_add btn_hidden">Add to basket</span>
+      </div>
+      <div class="product-list__item">
+        <img src="" alt="" width="200px" height="200px">
+        <p class="product-list__price">415 /кг</p>
+        <p class="product-list__title">Сливочное крем-брюле с карамельной подливкой</p>
+        <span class="btn btn_add btn_hidden">Add to basket</span>
+      </div>
+      <div class="product-list__item">
+        <img src="" alt="" width="200px" height="200px">
+        <p class="product-list__price">415 /кг</p>
+        <p class="product-list__title">Сливочное крем-брюле с карамельной подливкой</p>
+        <span class="btn btn_add btn_hidden">Add to basket</span>
+      </div>
+      <div class="product-list__item">
+        <img src="" alt="" width="200px" height="200px">
+        <p class="product-list__price">415 /кг</p>
+        <p class="product-list__title">Сливочное крем-брюле с карамельной подливкой</p>
+        <span class="btn btn_add btn_hidden">Add to basket</span>
+      </div>
+      <div class="product-list__item">
+        <img src="" alt="" width="200px" height="200px">
+        <p class="product-list__price">415 /кг</p>
+        <p class="product-list__title">Сливочное крем-брюле с карамельной подливкой</p>
+        <span class="btn btn_add btn_hidden">Add to basket</span>
+      </div>
+      <div class="product-list__item">
+        <img src="" alt="" width="200px" height="200px">
+        <p class="product-list__price">415 /кг</p>
+        <p class="product-list__title">Сливочное крем-брюле с карамельной подливкой</p>
+        <span class="btn btn_add btn_hidden">Add to basket</span>
+      </div>
+      <div class="product-list__item">
+        <img src="" alt="" width="200px" height="200px">
+        <p class="product-list__price">415 /кг</p>
+        <p class="product-list__title">Сливочное крем-брюле с карамельной подливкой</p>
+        <span class="btn btn_add btn_hidden">Add to basket</span>
+      </div>
+      <div class="product-list__item">
+        <img src="" alt="" width="200px" height="200px">
+        <p class="product-list__price">415 /кг</p>
+        <p class="product-list__title">Сливочное крем-брюле с карамельной подливкой</p>
+        <span class="btn btn_add btn_hidden">Add to basket</span>
+      </div>
+
+
+    </section>
+
+    <div class="pagination">
+      <a href="#">&laquo;</a>
+      <a href="#">1</a>
+      <a class="active" href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+      <a href="#">5</a>
+      <a href="#">&raquo;</a>
+    </div>
+
+    <!-- //Hidden contact us Form -->
+    <form action="">
+      <p>Мы обязательно вам ответим!</p>
+      <input type="text">
+      <label for=""></label>
+
+      <input type="text" name="" id="">
+      <label for=""></label>
+
+      <textarea name="" id="" cols="30" rows="10">
+
+    </textarea>
+
+      <button type="submit"></button>
+    </form>
+  </section>
+
+
+  <footer class="footer-main">
+
+    <section class="socials">
+      <ul class="socials__list">
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+      </ul>
+    </section>
+
+    <section class="info">
+      <ul class="info__list">
+        <li><a href="">For resellers</a></li>
+        <li><a href="">About production</a></li>
+        <li><a href="">Documents</a></li>
+        <li><a href="">Eco standards</a></li>
+      </ul>
+    </section>
+
+    <section class="copyright">
+      <img src="" alt="">
+      <p>Made by HTML Academy 2019</p>
+    </section>
+
+  </footer>
+
+  <!-- Basket Form -->
+  <section class="basket basket_hidden">
+    <div class="basket__table">
+      <!-- #1 -->
+      <div class="basket__item">
+        <div class="basket-item__btn">
+          <span class="basket-item_del"></span>
+        </div>
+
+        <div class="basket-item__img">
+          <img src="" alt="">
+        </div>
+
+
+        <div class="basket-item__descr">
+          <span>Пломбир с апельсиновым джемом</span>
+        </div>
+
+        <div class="basket-item__quantity">
+          <span>1,5 кг х 200 руб.</span>
+        </div>
+
+
+        <div class="basket__price">
+          <span>300 руб.</span>
+        </div>
+      </div>
+
+
+      <!-- #2 -->
+      <div class="basket__item">
+        <div class="basket-item__btn">
+          <span class="basket-item_del"></span>
+        </div>
+
+        <div class="basket-item__img">
+          <img src="" alt="">
+        </div>
+
+
+        <div class="basket-item__descr">
+          <span>Пломбир с апельсиновым джемом</span>
+        </div>
+
+        <div class="basket-item__quantity">
+          <span>1,5 кг х 200 руб.</span>
+        </div>
+
+
+        <div class="basket__price">
+          <span>300 руб.</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="basket__purchase">
+      <span>Total: 750 </span>
+      <span>Start purchase</span>
+    </div>
+  </section>
+
+
+</body>
+
+</html>
