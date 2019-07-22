@@ -150,16 +150,18 @@
       <a>10 ways to server fruit cerbets</a>
     </div>
 
-    <div class="info-block__item subscribtion">
-      <p>Подпишитесь на нашу сладкую рассылку
+    <form class="info-block__item subscribtion" method="post" action="#">
+      <p class="subsribtion__item">Подпишитесь на нашу сладкую рассылку
       и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной
       ерунды. Честно =)</p>
-      <form action="post">
-        <input type="email">
-        <label for=""></label>
-        <button>Subsribe</button>
-      </form>
-    </div>
+      <p class="subsribtion__item">
+        <input id="subscribtion-email" value="email" placeholder="Email" type="email">
+        <label class="hidden" for="">Type your email</label>
+      </p>
+
+      <button class="btn" type="submit">Subsribe</button>
+    </form>
+
   </section>
 </section>
 
