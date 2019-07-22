@@ -117,27 +117,33 @@
           </div>
         </div>
 
-        <div class="block__item">
-          <h2 class="block__title">Pick up the date</h2>
-          <div class="block__container">
-            <p class=""></p>
-            <form action="">
-              <label for=""></label>
-              <input type="text" name="" id="">
+        <section class="appointment">
+          <h2 >Pick up the date</h2>
+          <p class="appointment__info">Pickup the date and time and we'll get back to you</p>
+            <form action="#" method="post" class="appointment__form">
+              <p class="appointment-item">
+                <label for="appointment-date"></label>
+                <input type="text" name="date" id="appointment-date" placeholder="08.01.2020">
+              </p>
 
-              <label for=""></label>
-              <input type="text" name="" id="">
+              <p class="appointment-item">
+                <label for="appointment-time"></label>
+                <input type="text" name="time" id="appointment-time" placeholder="10:00">
+              </p>
 
-              <label for=""></label>
-              <input type="text" name="" id="">
+              <p class="appointment-item">
+                <label for="appointment-name"></label>
+                <input type="text" name="name" value="Ivan" id="appointment-name">
+              </p>
 
-              <label for=""></label>
-              <input type="text" name="" id="">
-
-              <button class="btn"></button>
+              <p class="appointment-item">
+                <label for="appointment-phone"></label>
+                <input type="tel" name="phone" value="" placeholder="+3 333 333-33-33" id="appointment-phone">
+              </p>
+              <button class="btn" type="submit">Send</button>
             </form>
-          </div>
-        </div>
+
+        </section>
 
 
       </div>
