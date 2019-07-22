@@ -199,15 +199,32 @@
   </footer>
 
   <!-- //Modal Window -->
-   <section class="modal modal-login">
-     <h2>Personal Area</h2>
-     <p>Enter your login and password</p>
-     <form action="">
+  <section class="modal modal-login">
+    <h2>Personal Area</h2>
+    <p>Enter your login and password</p>
+    <form class="login-form" method="post" action="">
+      <p>
+        <label for="user-login" class="hidden">Login</label>
+        <input id="user-login" class="login-icon-user" type="text" name="login" placeholder="Login">
+      </p>
 
+      <p>
+        <label for="user-password" class="hidden">Password</label>
+        <input id="user-password" class="login-icon-password" type="password" name="password" placeholder="Password">
+      </p>
+      <p>
+        <label for="login-password-info">
+          <input id="login-password-info" type="checkbox" name="remember" class="hidden">
+          <span class="checkbox-indicator"></span>
+          Remember me
+        </label>
+        <a href="#" class="restore">Forgot password!</a>
+      </p>
 
-     </form>
-     <span class="btn"></span>
-   </section>
+      <button class="btn" type="submit">Login</button>
+    </form>
+    <button class="modal-close" type="button">Close</button>
+  </section>
 </body>
 
 </html>
