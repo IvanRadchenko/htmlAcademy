@@ -155,14 +155,16 @@ img.hidden {
 
 .features__title,
 .block__titl,
-.modal h2 {
+.modal h2,
+.breadcrumbs__title {
   font-size: 30px;
   line-height: 42px;
 }
 
 /* Catalog styles */
 legend,
-.price__container-title {
+.price__container-title,
+.list__title {
   font-size: 24px;
   line-height: 30px;
   font-weight: 400;
@@ -358,4 +360,9 @@ background-color: #212121;
 .price__table {
   border-collapse: collapse;
   border-color: white;
+}
+
+/* Item styles */
+.descr__id {
+  color: #aba9a7;
 }
