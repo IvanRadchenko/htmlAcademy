@@ -161,7 +161,8 @@ img.hidden {
 }
 
 /* Catalog styles */
-legend {
+legend,
+.price__container-title {
   font-size: 24px;
   line-height: 30px;
   font-weight: 400;
@@ -343,3 +344,18 @@ background-color: #212121;
     background-color: #F2F2F0;
 }
 
+/* Price page */
+.title__price {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 48px;
+}
+
+.price__items::before {
+  content: "\2666";
+}
+
+.price__table {
+  border-collapse: collapse;
+  border-color: white;
+}
