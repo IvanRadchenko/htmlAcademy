@@ -12,23 +12,22 @@
 
    <!-- Styles -->
    <link rel="preload" href="./css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-   <noscript>
-     <link rel="stylesheet" href="./css/styles.css"></noscript>
+   <noscript><link rel="stylesheet" href="./css/styles.css"></noscript>
 </head>
 
-<body>
+<body class="body_catalog">
     <header class="header">
       <nav class="nav">
-        <a class="nav-logo nav-logo_offset" href="./index.html">
-          <img class="nav-logo__media" src="./svg/index-logo.svg" alt="Logo">
+        <a class="nav-logo" href="./index.html">
+          <img class="nav-logo__media" src="./svg/logo.svg" alt="Logo">
         </a>
 
-        <ul class="nav__list">
-          <li class="nav__item"><a href="">Info</a></li>
-          <li class="nav__item"><a href="#">News</a></li>
-          <li class="nav__item"><a href="./price.html">Prices</a></li>
-          <li class="nav__item nav_current"><a href="./catalog.html">Shop</a></li>
-          <li><a href="#">Contact us</a></li>
+        <ul class="nav-list">
+          <li class="nav-list__item"><a href="">Info</a></li>
+          <li class="nav-list__item"><a href="#">News</a></li>
+          <li class="nav-list__item"><a href="./price.html">Prices</a></li>
+          <li class="nav-list__item nav-list__item_active"><a href="./catalog.html">Shop</a></li>
+          <li class="nav-list__item"><a href="#">Contact us</a></li>
         </ul>
 
 
@@ -41,68 +40,66 @@
 
       </nav>
     </header>
-
   <section class="main">
 
    <section class="breadcrumbs">
      <h1 class="breadcrumbs__title">Some stuff to purchase</h1>
      <ul class="breadcrumbs__list">
-       <li class="breadcrumbs__item"><a href="./index.html">All</a></li>
-       <li class="breadcrumbs__item"><a href="./catalog.html">Shop</a></li>
-       <li class="breadcrumbs__item breadcrumbs_active"><a href="#">{breadcrumbs__title}></a></li>
+       <li class="breadcrumbs__item breadcrumbs_black"><a href="./index.html">All</a></li>
+       <li class="breadcrumbs__item breadcrumbs_black"><a href="./catalog.html">Shop</a></li>
+       <li class="breadcrumbs__item breadcrumbs_white"><a href="#">{breadcrumbs__title}></a></li>
      </ul>
    </section>
 
 
   <aside class="filters">
     <div class="filters__companies">
-      <h2>Products</h2>
       <!-- Form -->
       <form method="get" action="#" class="filter">
         <fieldset>
           <legend>Brands:</legend>
-              <ul>
-                <li class="filter__option">
-                  <input class="hidden filter__input finter__input_checkbox" type="checkbox" name="baxter-california" id="filter-baxter" checked>
-                  <label for="filter-baxter">Baxter of California</label>
+              <ul class="filter-list">
+                <li class="filter-list__option">
+                  <input class=" filter__input finter__input_checkbox" type="checkbox" name="baxter-california" id="filter-baxter" checked>
+                  <label class="filter-input__label" for="filter-baxter">Baxter of California</label>
                 </li>
-                <li class="filter__option">
-                  <input class="hidden filter__input finter__input_checkbox" type="checkbox" name="mr-natty" id="filter-natty">
-                  <label for="filter-natty">Mr Natty</label>
+                <li class="filter-list__option">
+                  <input class=" filter__input finter__input_checkbox" type="checkbox" name="mr-natty" id="filter-natty">
+                  <label class="filter-input__label" for="filter-natty">Mr Natty</label>
                 </li>
-                <li class="filter__option">
-                  <input class="hidden filter__input finter__input_checkbox" type="checkbox" name="suavecito" id="filter-suavetico" checked>
-                  <label for="filter-suavetico">Suavecito</label>
+                <li class="filter-list__option">
+                  <input class=" filter__input finter__input_checkbox" type="checkbox" name="suavecito" id="filter-suavetico" checked>
+                  <label class="filter-input__label" for="filter-suavetico">Suavecito</label>
                 </li>
-                <li class="filter__option">
-                  <input class="hidden filter__input finter__input_checkbox" type="checkbox" name="malin-goetz" id="filter-malin-goetz">
-                  <label for="filter-malin-goetz">Malin + Goetz</label>
+                <li class="filter-list__option">
+                  <input class=" filter__input finter__input_checkbox" type="checkbox" name="malin-goetz" id="filter-malin-goetz">
+                  <label class="filter-input__label" for="filter-malin-goetz">Malin + Goetz</label>
                 </li>
-                <li class="filter__option">
-                  <input class="hidden filter__input finter__input_checkbox" type="checkbox" name="murray" id="filter-murray">
-                  <label for="filter-murray">Murray's</label>
+                <li class="filter-list__option">
+                  <input class=" filter__input finter__input_checkbox" type="checkbox" name="murray" id="filter-murray">
+                  <label class="filter-input__label" for="filter-murray">Murray's</label>
                 </li>
-                <li class="filter__option">
-                  <input class="hidden filter__input finter__input_checkbox" type="checkbox" name="american-crew" id="filter-american-crew" checked>
-                  <label for="filter-american-crew">American Crew</label>
+                <li class="filter-list__option">
+                  <input class=" filter__input finter__input_checkbox" type="checkbox" name="american-crew" id="filter-american-crew" checked>
+                  <label class="filter-input__label" for="filter-american-crew">American Crew</label>
                 </li>
               </ul>
         </fieldset>
 
         <fieldset>
            <legend>Product Groups:</legend>
-           <ul>
-              <li class="filter__option">
-                <input class="hidden filter__input finter__input_radio" type="radio" name="product=group" id="filter-shave" >
-                <label for="filter-shave">Shave stuff</label>
+           <ul class="filter-list">
+              <li class="filter-list__option">
+                <input class=" filter__input finter__input_radio" type="radio" name="product=group" id="filter-shave" >
+                <label class="filter-input__label" for="filter-shave">Shave stuff</label>
               </li>
-              <li class="filter__option">
-                <input class="hidden filter__input finter__input_radio" type="radio" name="product=group" id="filter-care">
-                <label for="filter-care">Care stuff</label>
+              <li class="filter-list__option">
+                <input class=" filter__input finter__input_radio" type="radio" name="product=group" id="filter-care">
+                <label class="filter-input__label" for="filter-care">Care stuff</label>
               </li>
-              <li class="filter__option">
-                <input class="hidden filter__input finter__input_radio" type="radio" name="product=group" id="filter-accessories" >
-                <label for="filter-accessories">Men's accessories</label>
+              <li class="filter-list__option">
+                <input class=" filter__input finter__input_radio" type="radio" name="product=group" id="filter-accessories" >
+                <label class="filter-input__label" for="filter-accessories">Men's accessories</label>
               </li>
            </ul>
         </fieldset>
@@ -115,9 +112,9 @@
   <section class="products">
     <h2 class="hidden">Catalog of stuff to buy</h2>
 
-    <ul class="products__card">
+    <ul class="products__list">
       <li class="products__item">
-        <a href="./catalog.html">
+        <a class="products__item-link" href="./catalog.html">
           <p class="products__image">
             <img src="./assets/catalog-item.png" width="220px" height="165px" alt="Item image">
           </p>
@@ -127,15 +124,15 @@
           </h3>
         </a>
 
-          <p class="products__price">
-            <b>2900</b>
+          <div class="products__price">
+            <p>2900</p>
             <a class="btn" href="#">Purchase</a>
-          </p>
+          </div>
 
         </li>
 
      <li class="products__item">
-       <a href="./catalog.html">
+       <a class="products__item-link" href="./catalog.html">
          <p class="products__image">
            <img src="./assets/catalog-item.png" width="220px" height="165px" alt="Item image">
          </p>
@@ -145,15 +142,15 @@
          </h3>
        </a>
 
-       <p class="products__price">
-         <b>2900</b>
+       <div class="products__price">
+         <p>2900</p>
          <a class="btn" href="#">Purchase</a>
-       </p>
+       </div>
 
      </li>
 
       <li class="products__item">
-        <a href="./catalog.html">
+        <a class="products__item-link" href="./catalog.html">
           <p class="products__image">
             <img src="./assets/catalog-item.png" width="220px" height="165px" alt="Item image">
           </p>
@@ -163,15 +160,15 @@
           </h3>
         </a>
 
-        <p class="products__price">
-          <b>2900</b>
+        <div class="products__price">
+          <p>2900</p>
           <a class="btn" href="#">Purchase</a>
-        </p>
+        </div>
 
       </li>
 
        <li class="products__item">
-         <a href="./catalog.html">
+         <a class="products__item-link" href="./catalog.html">
            <p class="products__image">
              <img src="./assets/catalog-item.png" width="220px" height="165px" alt="Item image">
            </p>
@@ -181,15 +178,15 @@
            </h3>
          </a>
 
-         <p class="products__price">
-           <b>2900</b>
+         <div class="products__price">
+           <p>2900</p>
            <a class="btn" href="#">Purchase</a>
-         </p>
+         </div>
 
        </li>
 
         <li class="products__item">
-          <a href="./catalog.html">
+          <a class="products__item-link" href="./catalog.html">
             <p class="products__image">
               <img src="./assets/catalog-item.png" width="220px" height="165px" alt="Item image">
             </p>
@@ -199,15 +196,15 @@
             </h3>
           </a>
 
-          <p class="products__price">
-            <b>2900</b>
+          <div class="products__price">
+            <p>2900</p>
             <a class="btn" href="#">Purchase</a>
-          </p>
+          </div>
 
         </li>
 
          <li class="products__item">
-           <a href="./catalog.html">
+           <a class="products__item-link" href="./catalog.html">
              <p class="products__image">
                <img src="./assets/catalog-item.png" width="220px" height="165px" alt="Item image">
              </p>
@@ -217,10 +214,10 @@
              </h3>
            </a>
 
-           <p class="products__price">
-             <b>2900</b>
+           <div class="products__price">
+             <p>2900</p>
              <a class="btn" href="#">Purchase</a>
-           </p>
+           </div>
 
          </li>
 
@@ -232,69 +229,80 @@
 
     <!-- Start of Pagination -->
     <div class="pagination">
-      <ul>
-        <li class="pagination__item"><a href="#">1</a></li>
-        <li class="pagination__item pagination__item_current"><a href="#">2</a></li>
-        <li class="pagination__item"><a href="#">3</a></li>
-        <li class="pagination__item"><a href="#">4</a></li>
+      <ul class="list list_pagination">
+        <li class="list__item_box list__item_black"><a href="#">1</a></li>
+        <li class="list__item_box list__item_white"><a href="#">2</a></li>
+        <li class="list__item_box list__item_black"><a href="#">3</a></li>
+        <li class="list__item_box list__item_black"><a href="#">4</a></li>
       </ul>
     </div>
   </section>
 
 
-  <footer class="footer">
-    <address class="footer__address">
-      Written by <a href="mailto:webmaster@example.com">Jon Doe</a>.<br>
-      Visit us at: Box 564, Disneyland, USA<br>
-      <a>Find us on Google Maps</a><br>
-      Call us: +0 (000) 000-00-00<br>
-      <p></p>
-    </address>
+ <footer class="footer footer_txt-white">
+   <address class="footer__address">
+     Written by <a href="mailto:webmaster@example.com">Jon Doe</a>.<br>
+     Visit us at: Box 564, Disneyland, USA<br>
+     <a class="footer-address__link" href="#">Find us on Google Maps</a><br>
+     Call us: +0 (000) 000-00-00<br>
+     <p></p>
+   </address>
 
-    <div class="socials">
-      <p class="socials__title">Poke us on socials</p>
-      <ul class="socials__list">
-        <li class="socials__item"><a href="#"></a></li>
-        <li class="socials__item"><a href="#"></a></li>
-        <li class="socials__item"><a href="#"></a></li>
-      </ul>
+   <div class="soc">
+     <p class="soc__title">Poke us on socials</p>
+     <ul class="soc__list">
+       <li class="soc-list__item">
+         <a class="soc-list__link" href="#">
+           <img class="soc-list__icon" src="/barbershop/svg/facebook.svg" alt="">
 
-    </div>
+         </a>
+       </li>
+       <li class="soc-list__item">
+         <a class="soc-list__link" href="#">
+           <img class="soc-list__icon" src="/barbershop/svg/instagram.svg" alt="">
+         </a>
+       </li>
+       <li class="soc-list__item">
+         <a class="soc-list__link" href="#">
+           <img class="soc-list__icon" src="/barbershop/svg/vk.svg" alt="">
+         </a>
+       </li>
+     </ul>
+   </div>
 
-    <div class="copyright">
-      <p class="copyright__title">Designed by HTML Academy</p>
-      <button class="btn" type="button">HTML Academy</button>
-    </div>
+   <div class="copyright">
+     <p class="copyright__title">Designed by</p>
+     <a class="btn" href="#">HTML Academy</a>
+   </div>
 
-  </footer>
+ </footer>
 
-  <!-- //Modal Window -->
-  <section class="modal modal-login">
-    <h2>Personal Area</h2>
-    <p>Enter your login and password</p>
-    <form class="login-form" method="post" action="">
-      <p>
-        <label for="user-login" class="hidden">Login</label>
-        <input id="user-login" class="login-icon-user" type="text" name="login" placeholder="Login">
-      </p>
+ <section class="modal modal-login">
+   <h2>Personal Area</h2>
+   <p>Enter your login and password</p>
+   <form class="login-form" method="post" action="">
+     <p>
+       <label for="user-login" class="hidden">Login</label>
+       <input id="user-login" class="login-icon-user" type="text" name="login" placeholder="Login">
+     </p>
 
-      <p>
-        <label for="user-password" class="hidden">Password</label>
-        <input id="user-password" class="login-icon-password" type="password" name="password" placeholder="Password">
-      </p>
-      <p>
-        <label for="login-password-info">
-          <input id="login-password-info" type="checkbox" name="remember" class="hidden">
-          <span class="checkbox-indicator"></span>
-          Remember me
-        </label>
-        <a href="#" class="restore">Forgot password!</a>
-      </p>
+     <p>
+       <label for="user-password" class="hidden">Password</label>
+       <input id="user-password" class="login-icon-password" type="password" name="password" placeholder="Password">
+     </p>
+     <p class="login-password-info">
+       <label class="login-checkbox">
+         <input type="checkbox" name="remember" class="hidden">
+         <span class="checkbox-indicator"></span>
+         Remember me
+       </label>
+       <a href="#" class="restore">Forgot password!</a>
+     </p>
 
-      <button class="btn" type="submit">Login</button>
-    </form>
-    <button class="modal-close" type="button">Close</button>
-  </section>
+     <button class="btn" type="submit">Login</button>
+   </form>
+   <button class="modal-close" type="button">Close</button>
+ </section>
 </body>
 
 </html>

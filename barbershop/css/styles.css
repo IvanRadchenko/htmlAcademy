@@ -16,6 +16,12 @@ body {
 
 }
 
+.body_catalog {
+  background-image: none;
+  background-color: #D9B573;
+  color: #0D0D0D;
+}
+
 a {
   text-decoration: none;
 }
@@ -75,9 +81,14 @@ a {
   height: 155px;
 }
 
+/* List styles */
 .nav-list,
 .nav-user,
-.features__list {
+.features__list,
+.breadcrumbs__list,
+.filter-list,
+.products__list,
+.list {
   /* display: flex; */
   list-style: none;
   margin-block-start: 0;
@@ -92,7 +103,7 @@ a {
 } */
 
 .nav-list a,
-.nav-user a{
+.nav-user a {
   color: #ffffff;
 }
 
@@ -101,6 +112,14 @@ a {
 .nav-user a:hover,
 .nav-user a:focus {
   background-color: #242424;
+}
+
+.breadcrumbs_black a{
+  color: black;
+}
+
+.breadcrumbs_white a{
+ color: #aba9a7;
 }
 
 /* .nav__list {
@@ -139,6 +158,17 @@ img.hidden {
 .modal h2 {
   font-size: 30px;
   line-height: 42px;
+}
+
+/* Catalog styles */
+legend {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+fieldset {
+  border: none;
 }
 
 
@@ -193,6 +223,10 @@ align-items: baseline;
 padding-block-start: 15px;
 height: 150px;
 background-color: #212121;
+}
+
+.footer_txt-white {
+  color: #ffffff;
 }
 
 /* Social links block */
@@ -264,3 +298,48 @@ background-color: #212121;
 .login-checkbox:focus {
   color:white;
 }
+
+/* Filter Form */
+.filter__input,
+.filter-input__label {
+  cursor: pointer;
+}
+
+.filter-input__label:hover {
+  color: #663d15;
+}
+
+/* Catalog of products */
+
+.products__item {
+  background: #F2F2F0;
+  width: 244px;
+  height: 310px;
+}
+
+.products__item-link {
+  color: #000000;
+}
+
+.products__price p {
+  width: 110px;
+  height: 43px;
+  margin:0;
+
+  background-color: #aba9a7;
+}
+
+.list__item_box {
+  width: 43px;
+  height: 43px;
+
+}
+
+.list__item_black{
+    background-color: #0D0D0D;
+}
+
+.list__item_white {
+    background-color: #F2F2F0;
+}
+
