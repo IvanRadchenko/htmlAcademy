@@ -5,31 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+    <!-- Fonts fetch -->
+    <link rel="preload" href="./fonts/web/ptsansnarrowbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/web/ptsansnarrow.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+   <!-- Styles -->
+   <link rel="preload" href="./css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+   <noscript>
+     <link rel="stylesheet" href="./css/styles.css"></noscript>
 </head>
 <body>
-<header class="header">
-  <nav class="header__nav">
-    <a class="header__logo" href="#">
-      <img src="./svg/logo.svg" alt="Logo" width="371" height="155">
-    </a>
+  <header class="header">
+    <nav class="nav">
+      <a class="nav-logo nav-logo_offset" href="./index.html">
+        <img class="nav-logo__media" src="./svg/index-logo.svg" alt="Logo">
+      </a>
 
-     <ul class=nav">
-       <li class="nav__item"><a href="">Info</a></li>
-       <li class="nav__item"><a href="#">News</a></li>
-       <li class="nav__item"><a href="./price.html">Prices</a></li>
-       <li class="nav__item nav_current"><a href="./catalog.html">Shop</a></li>
-       <li><a href="#">Contact us</a></li>
-     </ul>
-
-
+      <ul class="nav__list">
+        <li class="nav__item"><a href="">Info</a></li>
+        <li class="nav__item"><a href="#">News</a></li>
+        <li class="nav__item"><a href="./price.html">Prices</a></li>
+        <li class="nav__item nav_current"><a href="./catalog.html">Shop</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
 
 
-    <ul class="nav-user">
-      <li class="login-link">Log-in</li>
-    </ul>
 
-  </nav>
-</header>
+
+      <ul class="nav-user">
+        <li class="login">
+          <a class="login-link" href="#"></a> Log in</li>
+      </ul>
+
+    </nav>
+  </header>
 
 <section class="main">
   <section class="breadcrumbs">
