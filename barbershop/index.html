@@ -1,51 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Barbeshop project</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Barbeshop project</title>
 
-    <!-- Fonts fetch -->
-    <link rel="preload" href="./fonts/web/ptsansnarrowbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/web/ptsansnarrow.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <!-- Fonts fetch -->
+  <link rel="preload" href="./fonts/web/ptsansnarrowbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/web/ptsansnarrow.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
-    <!-- Styles -->
-    <link rel="preconnect" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="preload" href="./css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="./css/styles.css"></noscript>
+  <!-- Styles -->
+  <link rel="preconnect" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="preload" href="./css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="./css/styles.css"></noscript>
 
 
 </head>
+
 <body>
 
   <header class="header header_bg-margin">
     <nav class="nav nav_flex-col">
       <a class="nav-logo nav-logo_offset" href="./index.html">
-          <img class="nav-logo__media" src="./svg/index-logo.svg" alt="Logo">
+        <img class="nav-logo__media" src="./svg/index-logo.svg" alt="Logo">
       </a>
 
-    <div class="nav-wrapper">
-      <div class="container">
-      <ul class="nav-list">
-         <li class="nav-list__item"><a href="">Info</a></li>
-         <li class="nav-list__item"><a href="#">News</a></li>
-         <li class="nav-list__item"><a href="./price.html">Prices</a></li>
-         <li class="nav-list__item nav-list__item_active"><a href="./catalog.html">Shop</a></li>
-         <li class="nav-list__item"><a href="#">Contact us</a></li>
-      </ul>
+      <div class="nav-wrapper">
+        <div class="container">
+          <ul class="nav-list">
+            <li class="nav-list__item"><a href="">Info</a></li>
+            <li class="nav-list__item"><a href="#">News</a></li>
+            <li class="nav-list__item"><a href="./price.html">Prices</a></li>
+            <li class="nav-list__item nav-list__item_active"><a href="./catalog.html">Shop</a></li>
+            <li class="nav-list__item"><a href="#">Contact us</a></li>
+          </ul>
 
-      <ul class="nav-user">
-        <li class="login">
-          <a class="login-link" href="#">Log in</a>
-        </li>
-      </ul>
+          <ul class="nav-user">
+            <li class="login">
+              <a class="login-link" href="#">Log in</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
     </nav>
   </header>
 
-<main class="container">
+  <main class="container">
     <h1 class="hidden">Barbershop</h1>
 
 
@@ -53,20 +56,23 @@
 
       <ul class="features__list">
         <li class="features__item">
-            <h3 class="features__title">Fast</h3>
-            <p class="features__text">We'll shave you in a blink of an eye. We know you blinked! You know you are bold.</p>
+          <h3 class="features__title">Fast</h3>
+          <p class="features__text">We'll shave you in a blink of an eye. We know you blinked! You know you are bold.
+          </p>
         </li>
 
 
         <li class="features__item">
           <h3 class="features__title">Outstanding</h3>
-          <p class="features__text">Forget about your former hair styles. We'll turn you into a super star. At least visually</p>
+          <p class="features__text">Forget about your former hair styles. We'll turn you into a super star. At least
+            visually</p>
         </li>
 
 
         <li class="features__item">
           <h3 class="features__title">Pricy</h3>
-          <p class="features__text">Our masters - are jedis of the fallen barber republic. To forge saber swords back, you have to pay an earth. </p>
+          <p class="features__text">Our masters - are jedis of the fallen barber republic. To forge saber swords back,
+            you have to pay an earth. </p>
         </li>
       </ul>
 
@@ -133,28 +139,28 @@
         <div class="block__item appointment">
           <h2 class="block__title">Pick up the date</h2>
           <p class="appointment-info">Pickup the date and time and we'll get back to you</p>
-            <form action="#" method="post" class="appointment-form">
-              <p class="appointment-item">
-                <label for="appointment-date">Date</label>
-                <input type="text" name="date" id="appointment-date" placeholder="08.01.2020">
-              </p>
+          <form action="#" method="post" class="appointment-form">
+            <p class="appointment-item">
+              <label for="appointment-date">Date</label>
+              <input type="text" name="date" id="appointment-date" placeholder="08.01.2020">
+            </p>
 
-              <p class="appointment-item">
-                <label for="appointment-time">Time</label>
-                <input type="text" name="time" id="appointment-time" placeholder="10:00">
-              </p>
+            <p class="appointment-item">
+              <label for="appointment-time">Time</label>
+              <input type="text" name="time" id="appointment-time" placeholder="10:00">
+            </p>
 
-              <p class="appointment-item">
-                <label for="appointment-name">Name</label>
-                <input type="text" name="name" value="Ivan" id="appointment-name">
-              </p>
+            <p class="appointment-item">
+              <label for="appointment-name">Name</label>
+              <input type="text" name="name" value="Ivan" id="appointment-name">
+            </p>
 
-              <p class="appointment-item">
-                <label for="appointment-phone">Phone</label>
-                <input type="tel" name="phone" value="" placeholder="+3 333 333-33-33" id="appointment-phone">
-              </p>
-              <button class="btn btn_wide" type="submit">Send</button>
-            </form>
+            <p class="appointment-item">
+              <label for="appointment-phone">Phone</label>
+              <input type="tel" name="phone" value="" placeholder="+3 333 333-33-33" id="appointment-phone">
+            </p>
+            <button class="btn btn_wide" type="submit">Send</button>
+          </form>
 
         </div>
 
@@ -164,14 +170,14 @@
       </div>
 
     </section>
-</main>
+  </main>
 
-    <footer class="footer">
-      <div class="container">
+  <footer class="footer">
+    <div class="container">
       <address class="footer__address">
         Written by <a href="mailto:webmaster@example.com">Jon Doe</a>.<br>
         Visit us at: Box 564, Disneyland, USA<br>
-        <a class="footer-address__link" href="#" >Find us on Google Maps</a><br>
+        <a class="footer-address__link" href="#">Find us on Google Maps</a><br>
         Call us: +0 (000) 000-00-00<br>
         <p></p>
       </address>
@@ -181,7 +187,7 @@
         <ul class="soc__list">
           <li class="soc-list__item">
             <a class="soc-list__link" href="#">
-                <img class="soc-list__icon" src="/barbershop/svg/facebook.svg" alt="">
+              <img class="soc-list__icon" src="/barbershop/svg/facebook.svg" alt="">
 
             </a>
           </li>
@@ -202,43 +208,44 @@
         <p class="copyright__title">Designed by</p>
         <a class="btn" href="#">HTML Academy</a>
       </div>
-      </div>
-    </footer>
+    </div>
+  </footer>
 
-    <section class="modal modal-login">
-      <h2>Personal Area</h2>
-      <p>Enter your login and password</p>
-      <form class="login-form" method="post" action="">
-        <p>
-          <label for="user-login" class="hidden">Login</label>
-          <input id="user-login" class="login-icon-user" type="text" name="login" placeholder="Login">
-        </p>
-
-        <p>
-          <label for="user-password" class="hidden">Password</label>
-          <input id="user-password" class="login-icon-password" type="password" name="password" placeholder="Password">
-        </p>
-        <p class="login-password-info">
-          <label class="login-checkbox">
-            <input type="checkbox" name="remember" class="hidden">
-            <span class="checkbox-indicator"></span>
-            Remember me
-          </label>
-          <a href="#" class="restore">Forgot password!</a>
-        </p>
-
-        <button class="btn" type="submit">Login</button>
-      </form>
-      <button class="modal-close" type="button">Close</button>
-    </section>
-
-    <section class="modal modal-map">
-      <h2 class="hidden">How to find us</h2>
+  <section class="modal modal-login">
+    <h2>Personal Area</h2>
+    <p>Enter your login and password</p>
+    <form class="login-form" method="post" action="">
       <p>
-        <img src="assets/map-form.png" width="780" height="560" alt="Visit us at: Box 564, Disneyland, USA">
+        <label for="user-login" class="hidden">Login</label>
+        <input id="user-login" class="login-icon-user" type="text" name="login" placeholder="Login">
       </p>
-      <button class="modal-close" type="button">Close</button>
-    </section>
+
+      <p>
+        <label for="user-password" class="hidden">Password</label>
+        <input id="user-password" class="login-icon-password" type="password" name="password" placeholder="Password">
+      </p>
+      <p class="login-password-info">
+        <label class="login-checkbox">
+          <input type="checkbox" name="remember" class="hidden">
+          <span class="checkbox-indicator"></span>
+          Remember me
+        </label>
+        <a href="#" class="restore">Forgot password!</a>
+      </p>
+
+      <button class="btn" type="submit">Login</button>
+    </form>
+    <button class="modal-close" type="button">Close</button>
+  </section>
+
+  <section class="modal modal-map">
+    <h2 class="hidden">How to find us</h2>
+    <p>
+      <img src="assets/map-form.png" width="780" height="560" alt="Visit us at: Box 564, Disneyland, USA">
+    </p>
+    <button class="modal-close" type="button">Close</button>
+  </section>
 
 </body>
+
 </html>

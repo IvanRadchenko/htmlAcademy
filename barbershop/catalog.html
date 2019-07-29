@@ -6,303 +6,310 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-      <!-- Fonts fetch -->
-      <link rel="preload" href="./fonts/web/ptsansnarrowbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-      <link rel="preload" href="./fonts/web/ptsansnarrow.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <!-- Fonts fetch -->
+  <link rel="preload" href="./fonts/web/ptsansnarrowbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/web/ptsansnarrow.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
-   <!-- Styles -->
-   <link rel="preload" href="./css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-   <noscript><link rel="stylesheet" href="./css/styles.css"></noscript>
+  <!-- Styles -->
+  <link rel="preload" href="./css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="./css/styles.css"></noscript>
 </head>
 
 <body class="body_catalog">
-    <header class="header">
-      <nav class="nav">
-        <a class="nav-logo" href="./index.html">
-          <img class="nav-logo__media" src="./svg/logo.svg" alt="Logo">
-        </a>
+  <header class="header header_md-margin">
+    <nav class="nav nav_flex-row">
+      <a class="nav-logo" href="./index.html">
+        <img class="nav-logo__media" src="./svg/logo.svg" alt="Logo">
+      </a>
 
-        <ul class="nav-list">
-          <li class="nav-list__item"><a href="">Info</a></li>
-          <li class="nav-list__item"><a href="#">News</a></li>
-          <li class="nav-list__item"><a href="./price.html">Prices</a></li>
-          <li class="nav-list__item nav-list__item_active"><a href="./catalog.html">Shop</a></li>
-          <li class="nav-list__item"><a href="#">Contact us</a></li>
-        </ul>
+      <ul class="nav-list">
+        <li class="nav-list__item"><a href="">Info</a></li>
+        <li class="nav-list__item"><a href="#">News</a></li>
+        <li class="nav-list__item"><a href="./price.html">Prices</a></li>
+        <li class="nav-list__item nav-list__item_active"><a href="./catalog.html">Shop</a></li>
+        <li class="nav-list__item"><a href="#">Contact us</a></li>
+      </ul>
 
+      <ul class="nav-user nav-user_mrgauto">
+        <li class="login">
+          <a class="login-link" href="#">Log in</a>
+        </li>
+      </ul>
 
+    </nav>
+  </header>
 
+  <section class="main main_flex main_flex-col">
 
-        <ul class="nav-user">
-          <li class="login">
-            <a class="login-link" href="#"></a> Log in</li>
-        </ul>
+    <section class="breadcrumbs">
+      <h1 class="breadcrumbs__title">Some stuff to purchase</h1>
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item breadcrumbs_black"><a href="./index.html">All</a></li>
+        <li class="breadcrumbs__item breadcrumbs_black"><a href="./catalog.html">Shop</a></li>
+        <li class="breadcrumbs__item breadcrumbs_white"><a href="#">{breadcrumbs__title}></a></li>
+      </ul>
+    </section>
 
-      </nav>
-    </header>
-  <section class="main">
-
-   <section class="breadcrumbs">
-     <h1 class="breadcrumbs__title">Some stuff to purchase</h1>
-     <ul class="breadcrumbs__list">
-       <li class="breadcrumbs__item breadcrumbs_black"><a href="./index.html">All</a></li>
-       <li class="breadcrumbs__item breadcrumbs_black"><a href="./catalog.html">Shop</a></li>
-       <li class="breadcrumbs__item breadcrumbs_white"><a href="#">{breadcrumbs__title}></a></li>
-     </ul>
-   </section>
-
-
-  <aside class="filters">
-    <div class="filters__companies">
-      <!-- Form -->
-      <form method="get" action="#" class="filter">
-        <fieldset>
-          <legend>Brands:</legend>
+    <section class="container_flex-row">
+      <aside class="filters">
+        <div class="filters__companies">
+          <!-- Form -->
+          <form method="get" action="#" class="filter">
+            <fieldset>
+              <legend>Brands:</legend>
               <ul class="filter-list">
-                <li class="filter-list__option">
-                  <input class=" filter__input finter__input_checkbox" type="checkbox" name="baxter-california" id="filter-baxter" checked>
+                <li class="filter-list__option filter-list__option_cross">
+                  <input class="hidden filter__input finter__input_checkbox" type="checkbox" name="baxter-california"
+                    id="filter-baxter" checked>
                   <label class="filter-input__label" for="filter-baxter">Baxter of California</label>
                 </li>
-                <li class="filter-list__option">
-                  <input class=" filter__input finter__input_checkbox" type="checkbox" name="mr-natty" id="filter-natty">
+                <li class="filter-list__option filter-list__option_cross">
+                  <input class="hidden filter__input finter__input_checkbox" type="checkbox" name="mr-natty"
+                    id="filter-natty">
                   <label class="filter-input__label" for="filter-natty">Mr Natty</label>
                 </li>
-                <li class="filter-list__option">
-                  <input class=" filter__input finter__input_checkbox" type="checkbox" name="suavecito" id="filter-suavetico" checked>
+                <li class="filter-list__option filter-list__option_cross">
+                  <input class="hidden filter__input finter__input_checkbox" type="checkbox" name="suavecito"
+                    id="filter-suavetico" checked>
                   <label class="filter-input__label" for="filter-suavetico">Suavecito</label>
                 </li>
-                <li class="filter-list__option">
-                  <input class=" filter__input finter__input_checkbox" type="checkbox" name="malin-goetz" id="filter-malin-goetz">
+                <li class="filter-list__option filter-list__option_cross">
+                  <input class="hidden filter__input finter__input_checkbox" type="checkbox" name="malin-goetz"
+                    id="filter-malin-goetz">
                   <label class="filter-input__label" for="filter-malin-goetz">Malin + Goetz</label>
                 </li>
-                <li class="filter-list__option">
-                  <input class=" filter__input finter__input_checkbox" type="checkbox" name="murray" id="filter-murray">
+                <li class="filter-list__option filter-list__option_cross">
+                  <input class="hidden filter__input finter__input_checkbox" type="checkbox" name="murray"
+                    id="filter-murray">
                   <label class="filter-input__label" for="filter-murray">Murray's</label>
                 </li>
-                <li class="filter-list__option">
-                  <input class=" filter__input finter__input_checkbox" type="checkbox" name="american-crew" id="filter-american-crew" checked>
+                <li class="filter-list__option filter-list__option_cross">
+                  <input class="hidden filter__input finter__input_checkbox" type="checkbox" name="american-crew"
+                    id="filter-american-crew" checked>
                   <label class="filter-input__label" for="filter-american-crew">American Crew</label>
                 </li>
               </ul>
-        </fieldset>
+            </fieldset>
 
-        <fieldset>
-           <legend>Product Groups:</legend>
-           <ul class="filter-list">
-              <li class="filter-list__option">
-                <input class=" filter__input finter__input_radio" type="radio" name="product=group" id="filter-shave" >
-                <label class="filter-input__label" for="filter-shave">Shave stuff</label>
-              </li>
-              <li class="filter-list__option">
-                <input class=" filter__input finter__input_radio" type="radio" name="product=group" id="filter-care">
-                <label class="filter-input__label" for="filter-care">Care stuff</label>
-              </li>
-              <li class="filter-list__option">
-                <input class=" filter__input finter__input_radio" type="radio" name="product=group" id="filter-accessories" >
-                <label class="filter-input__label" for="filter-accessories">Men's accessories</label>
-              </li>
-           </ul>
-        </fieldset>
+            <fieldset>
+              <legend>Product Groups:</legend>
+              <ul class="filter-list">
+                <li class="filter-list__option filter-list__option_circle">
+                  <input class=" filter__input finter__input_radio" type="radio" name="product=group" id="filter-shave">
+                  <label class="filter-input__label" for="filter-shave">Shave stuff</label>
+                </li>
+                <li class="filter-list__option filter-list__option_circle">
+                  <input class=" filter__input finter__input_radio" type="radio" name="product=group" id="filter-care">
+                  <label class="filter-input__label" for="filter-care">Care stuff</label>
+                </li>
+                <li class="filter-list__option filter-list__option_circle">
+                  <input class=" filter__input finter__input_radio" type="radio" name="product=group"
+                    id="filter-accessories">
+                  <label class="filter-input__label" for="filter-accessories">Men's accessories</label>
+                </li>
+              </ul>
+            </fieldset>
 
-        <button type="submit" class="filter-btn btn">Filter</button>
-      </form>
+            <button type="submit" class="filter-btn btn">Filter</button>
+          </form>
 
-  </aside>
+      </aside>
 
-  <section class="products">
-    <h2 class="hidden">Catalog of stuff to buy</h2>
+      <main class="container ">
+        <section class="products">
+          <ul class="products__list">
+            <li class="products__item">
+              <a class="products__item-link" href="./item.html">
+                <p class="products__image">
+                  <img src="./assets/catalog-item.png" width="220px" height="165px" alt="Item image">
+                </p>
+                <h3 class="products__descr-wrapper">
+                  <span class="products__category">Traveller pack</span><br>
+                  <span class="products__name">«Baxter of California»</span>
+                </h3>
+              </a>
 
-    <ul class="products__list">
-      <li class="products__item">
-        <a class="products__item-link" href="./item.html">
-          <p class="products__image">
-            <img src="./assets/catalog-item.png" width="220px" height="165px" alt="Item image">
-          </p>
-          <h3>
-            <span class="products__category">Traveller pack</span>
-            <span class="products__name">«Baxter of California»</span>
-          </h3>
-        </a>
+              <div class="products__price">
+                <p class="products-price">2900</p>
+                <a class="btn" href="#">Purchase</a>
+              </div>
 
-          <div class="products__price">
-            <p>2900</p>
-            <a class="btn" href="#">Purchase</a>
-          </div>
+            </li>
 
-        </li>
+            <li class="products__item">
+              <a class="products__item-link" href="./item.html">
+                <p class="products__image">
+                  <img src="./assets/catalog-item.png" width="220px" height="165px" alt="Item image">
+                </p>
+                <h3 class="products__descr-wrapper">
+                  <span class="products__category">Traveller pack</span><br>
+                  <span class="products__name">«Baxter of California»</span>
+                </h3>
+              </a>
 
-     <li class="products__item">
-       <a class="products__item-link" href="./item.html">
-         <p class="products__image">
-           <img src="./assets/catalog-item.png" width="220px" height="165px" alt="Item image">
-         </p>
-         <h3>
-           <span class="products__category">Traveller pack</span>
-           <span class="products__name">«Baxter of California»</span>
-         </h3>
-       </a>
+              <div class="products__price">
+                <p class="products-price">2900</p>
+                <a class="btn" href="#">Purchase</a>
+              </div>
 
-       <div class="products__price">
-         <p>2900</p>
-         <a class="btn" href="#">Purchase</a>
-       </div>
+            </li>
 
-     </li>
+            <li class="products__item">
+              <a class="products__item-link" href="./item.html">
+                <p class="products__image">
+                  <img src="./assets/catalog-item.png" width="220px" height="165px" alt="Item image">
+                </p>
+                <h3 class="products__descr-wrapper">
+                  <span class="products__category">Traveller pack</span><br>
+                  <span class="products__name">«Baxter of California»</span>
+                </h3>
+              </a>
 
-      <li class="products__item">
-        <a class="products__item-link" href="./item.html">
-          <p class="products__image">
-            <img src="./assets/catalog-item.png" width="220px" height="165px" alt="Item image">
-          </p>
-          <h3>
-            <span class="products__category">Traveller pack</span>
-            <span class="products__name">«Baxter of California»</span>
-          </h3>
-        </a>
+              <div class="products__price">
+                <p class="products-price">2900</p>
+                <a class="btn" href="#">Purchase</a>
+              </div>
 
-        <div class="products__price">
-          <p>2900</p>
-          <a class="btn" href="#">Purchase</a>
+            </li>
+
+            <li class="products__item">
+              <a class="products__item-link" href="./item.html">
+                <p class="products__image">
+                  <img src="./assets/catalog-item.png" width="220px" height="165px" alt="Item image">
+                </p>
+                <h3 class="products__descr-wrapper">
+                  <span class="products__category">Traveller pack</span><br>
+                  <span class="products__name">«Baxter of California»</span>
+                </h3>
+              </a>
+
+              <div class="products__price">
+                <p class="products-price">2900</p>
+                <a class="btn" href="#">Purchase</a>
+              </div>
+
+            </li>
+
+            <li class="products__item">
+              <a class="products__item-link" href="./item.html">
+                <p class="products__image">
+                  <img src="./assets/catalog-item.png" width="220px" height="165px" alt="Item image">
+                </p>
+                <h3 class="products__descr-wrapper">
+                  <span class="products__category">Traveller pack</span><br>
+                  <span class="products__name">«Baxter of California»</span>
+                </h3>
+              </a>
+
+              <div class="products__price">
+                <p class="products-price">2900</p>
+                <a class="btn" href="#">Purchase</a>
+              </div>
+
+            </li>
+
+            <li class="products__item">
+              <a class="products__item-link" href="./item.html">
+                <p class="products__image">
+                  <img src="./assets/catalog-item.png" width="220px" height="165px" alt="Item image">
+                </p>
+                <h3 class="products__descr-wrapper">
+                  <span class="products__category">Traveller pack</span><br>
+                  <span class="products__name">«Baxter of California»</span>
+                </h3>
+              </a>
+
+              <div class="products__price">
+                <p class="products-price">2900</p>
+                <a class="btn" href="#">Purchase</a>
+              </div>
+
+            </li>
+
+
+
+
+          </ul>
+        </section>
+
+        <div class="pagination">
+          <ul class="list list_pagination">
+            <li class="list__item list__item_box list__item_black"><a href="#">1</a></li>
+            <li class="list__item list__item_box list__item_white"><a href="#">2</a></li>
+            <li class="list__item list__item_box list__item_black"><a href="#">3</a></li>
+            <li class="list__item list__item_box list__item_black"><a href="#">4</a></li>
+          </ul>
         </div>
-
-      </li>
-
-       <li class="products__item">
-         <a class="products__item-link" href="./item.html">
-           <p class="products__image">
-             <img src="./assets/catalog-item.png" width="220px" height="165px" alt="Item image">
-           </p>
-           <h3>
-             <span class="products__category">Traveller pack</span>
-             <span class="products__name">«Baxter of California»</span>
-           </h3>
-         </a>
-
-         <div class="products__price">
-           <p>2900</p>
-           <a class="btn" href="#">Purchase</a>
-         </div>
-
-       </li>
-
-        <li class="products__item">
-          <a class="products__item-link" href="./item.html">
-            <p class="products__image">
-              <img src="./assets/catalog-item.png" width="220px" height="165px" alt="Item image">
-            </p>
-            <h3>
-              <span class="products__category">Traveller pack</span>
-              <span class="products__name">«Baxter of California»</span>
-            </h3>
-          </a>
-
-          <div class="products__price">
-            <p>2900</p>
-            <a class="btn" href="#">Purchase</a>
-          </div>
-
-        </li>
-
-         <li class="products__item">
-           <a class="products__item-link" href="./item.html">
-             <p class="products__image">
-               <img src="./assets/catalog-item.png" width="220px" height="165px" alt="Item image">
-             </p>
-             <h3>
-               <span class="products__category">Traveller pack</span>
-               <span class="products__name">«Baxter of California»</span>
-             </h3>
-           </a>
-
-           <div class="products__price">
-             <p>2900</p>
-             <a class="btn" href="#">Purchase</a>
-           </div>
-
-         </li>
-
-
-
-
-    </ul>
-
-
-    <!-- Start of Pagination -->
-    <div class="pagination">
-      <ul class="list list_pagination">
-        <li class="list__item_box list__item_black"><a href="#">1</a></li>
-        <li class="list__item_box list__item_white"><a href="#">2</a></li>
-        <li class="list__item_box list__item_black"><a href="#">3</a></li>
-        <li class="list__item_box list__item_black"><a href="#">4</a></li>
-      </ul>
-    </div>
+      </main>
+    </section>
   </section>
 
+  <footer class="footer footer_txt-white">
+    <div class="container">
+      <address class="footer__address">
+        Written by <a href="mailto:webmaster@example.com">Jon Doe</a>.<br>
+        Visit us at: Box 564, Disneyland, USA<br>
+        <a class="footer-address__link" href="#">Find us on Google Maps</a><br>
+        Call us: +0 (000) 000-00-00<br>
+        <p></p>
+      </address>
 
- <footer class="footer footer_txt-white">
-   <address class="footer__address">
-     Written by <a href="mailto:webmaster@example.com">Jon Doe</a>.<br>
-     Visit us at: Box 564, Disneyland, USA<br>
-     <a class="footer-address__link" href="#">Find us on Google Maps</a><br>
-     Call us: +0 (000) 000-00-00<br>
-     <p></p>
-   </address>
+      <div class="soc">
+        <p class="soc__title">Poke us on socials</p>
+        <ul class="soc__list">
+          <li class="soc-list__item">
+            <a class="soc-list__link" href="#">
+              <img class="soc-list__icon" src="/barbershop/svg/facebook.svg" alt="">
 
-   <div class="soc">
-     <p class="soc__title">Poke us on socials</p>
-     <ul class="soc__list">
-       <li class="soc-list__item">
-         <a class="soc-list__link" href="#">
-           <img class="soc-list__icon" src="/barbershop/svg/facebook.svg" alt="">
+            </a>
+          </li>
+          <li class="soc-list__item">
+            <a class="soc-list__link" href="#">
+              <img class="soc-list__icon" src="/barbershop/svg/instagram.svg" alt="">
+            </a>
+          </li>
+          <li class="soc-list__item">
+            <a class="soc-list__link" href="#">
+              <img class="soc-list__icon" src="/barbershop/svg/vk.svg" alt="">
+            </a>
+          </li>
+        </ul>
+      </div>
 
-         </a>
-       </li>
-       <li class="soc-list__item">
-         <a class="soc-list__link" href="#">
-           <img class="soc-list__icon" src="/barbershop/svg/instagram.svg" alt="">
-         </a>
-       </li>
-       <li class="soc-list__item">
-         <a class="soc-list__link" href="#">
-           <img class="soc-list__icon" src="/barbershop/svg/vk.svg" alt="">
-         </a>
-       </li>
-     </ul>
-   </div>
+      <div class="copyright">
+        <p class="copyright__title">Designed by</p>
+        <a class="btn" href="#">HTML Academy</a>
+      </div>
+    </div>
+  </footer>
 
-   <div class="copyright">
-     <p class="copyright__title">Designed by</p>
-     <a class="btn" href="#">HTML Academy</a>
-   </div>
+  <section class="modal modal-login">
+    <h2>Personal Area</h2>
+    <p>Enter your login and password</p>
+    <form class="login-form" method="post" action="">
+      <p>
+        <label for="user-login" class="hidden">Login</label>
+        <input id="user-login" class="login-icon-user" type="text" name="login" placeholder="Login">
+      </p>
 
- </footer>
+      <p>
+        <label for="user-password" class="hidden">Password</label>
+        <input id="user-password" class="login-icon-password" type="password" name="password" placeholder="Password">
+      </p>
+      <p class="login-password-info">
+        <label class="login-checkbox">
+          <input type="checkbox" name="remember" class="hidden">
+          <span class="checkbox-indicator"></span>
+          Remember me
+        </label>
+        <a href="#" class="restore">Forgot password!</a>
+      </p>
 
- <section class="modal modal-login">
-   <h2>Personal Area</h2>
-   <p>Enter your login and password</p>
-   <form class="login-form" method="post" action="">
-     <p>
-       <label for="user-login" class="hidden">Login</label>
-       <input id="user-login" class="login-icon-user" type="text" name="login" placeholder="Login">
-     </p>
-
-     <p>
-       <label for="user-password" class="hidden">Password</label>
-       <input id="user-password" class="login-icon-password" type="password" name="password" placeholder="Password">
-     </p>
-     <p class="login-password-info">
-       <label class="login-checkbox">
-         <input type="checkbox" name="remember" class="hidden">
-         <span class="checkbox-indicator"></span>
-         Remember me
-       </label>
-       <a href="#" class="restore">Forgot password!</a>
-     </p>
-
-     <button class="btn" type="submit">Login</button>
-   </form>
-   <button class="modal-close" type="button">Close</button>
- </section>
+      <button class="btn" type="submit">Login</button>
+    </form>
+    <button class="modal-close" type="button">Close</button>
+  </section>
 </body>
 
 </html>
