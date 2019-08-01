@@ -223,8 +223,12 @@ legend,
 }
 
 legend {
+<<<<<<< HEAD
   padding: 0;
   ;
+=======
+  padding: 0;;
+>>>>>>> fe3dc88be6436f38bc0dd3fe0ac6f30b5237b1d1
   margin-block-end: 30px;
 }
 
@@ -391,7 +395,11 @@ fieldset {
   content: "";
   position: absolute;
   display: block;
+<<<<<<< HEAD
   background-image: url("/barbershop/svg/cross.svg");
+=======
+  background-image: url("/barbershop/svg/cross.svg") ;
+>>>>>>> fe3dc88be6436f38bc0dd3fe0ac6f30b5237b1d1
   background-repeat: no-repeat;
   background-position-x: 50%;
   background-position-y: 50%;
@@ -412,7 +420,10 @@ fieldset {
   border-radius: 50%;
   border: 2px solid #000101;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe3dc88be6436f38bc0dd3fe0ac6f30b5237b1d1
 /* Catalog of products */
 .container_flex-row {
   display: flex;
@@ -439,7 +450,10 @@ fieldset {
   margin-block-end: 20px;
   box-shadow: 0 0 15px rgba(0, 1, 1, 0.2);
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe3dc88be6436f38bc0dd3fe0ac6f30b5237b1d1
 .products__image {
   margin: 0;
 }
@@ -457,7 +471,6 @@ fieldset {
 .products__item-link {
   color: #000000;
 }
-
 .products__price {
   display: flex;
   flex-direction: row;
@@ -465,6 +478,16 @@ fieldset {
   padding: 10px;
 }
 
+<<<<<<< HEAD
+.products__price {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 10px;
+}
+
+=======
+>>>>>>> fe3dc88be6436f38bc0dd3fe0ac6f30b5237b1d1
 .products-price {
   display: flex;
   align-items: center;
@@ -472,7 +495,11 @@ fieldset {
   width: 110px;
   height: 43px;
   font-weight: 700;
+<<<<<<< HEAD
   margin: 0;
+=======
+  margin:0;
+>>>>>>> fe3dc88be6436f38bc0dd3fe0ac6f30b5237b1d1
   background-color: #aba9a7;
 }
 
@@ -494,6 +521,7 @@ fieldset {
   width: 43px;
   height: 43px;
 }
+<<<<<<< HEAD
 
 .list__item_box a {
   display: block;
@@ -505,6 +533,19 @@ fieldset {
 
 .list__item_black {
   background-color: #0D0D0D;
+=======
+
+.list__item_box a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-block-start: 10px;
+>>>>>>> fe3dc88be6436f38bc0dd3fe0ac6f30b5237b1d1
+}
+
+.list__item_black a {
+  color: #ffffff;
 }
 
 .list__item_black a {
@@ -517,6 +558,10 @@ fieldset {
 
 .list__item_white a {
   color: #000000;
+}
+
+.list__item_white a {
+    color: #000000;
 }
 
 /* Price page */
