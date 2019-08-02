@@ -38,7 +38,7 @@ a {
 .hidden:not(:focus):not(:active),
 input[type="checkbox"].hidden,
 input[type="radio"].hidden {
-  position: : absolute;
+  position: absolute;
 
   width: 1px;
   height: 1px;
@@ -243,11 +243,26 @@ input[type="radio"].hidden {
 }
 
 .breadcrumbs__item {
-  margin-inline-end: 30px
+  position: relative;
+  margin-inline-end: 50px;
 }
 
 .breadcrumbs_black a {
   color: black;
+}
+
+.breadcrumbs_black::after {
+   position: absolute;
+   display: block;
+   content: "";
+   right: -25px;
+   top: 8px;
+   transform: rotate(45deg);
+
+   width: 10px;
+   height: 10px;
+
+   background-color: #0D0D0D;
 }
 
 .breadcrumbs_white a {
@@ -720,11 +735,23 @@ fieldset {
 }
 
 .price__items {
+  position: relative;
   margin-block-end: 15px;
+  padding-inline-start: 20px;
 }
 
 .price__items::before {
-  content: "\2666";
+   position: absolute;
+   display: block;
+   content: "";
+   left: 0;
+   top: 6px;
+   transform: rotate(45deg);
+
+   width: 10px;
+   height: 10px;
+
+   background-color: #0D0D0D;
 }
 
 .price__table {
@@ -754,6 +781,10 @@ td {
   display: flex;
   justify-content: space-between;
   margin-block-end: 50px;
+}
+
+.about-us {
+  margin-block-end: 80px;
 }
 
 .about-us__container {
