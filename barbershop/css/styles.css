@@ -788,6 +788,12 @@ td {
   margin-block-end: 50px;
 }
 
+.price__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .about-us {
   margin-block-end: 80px;
 }
