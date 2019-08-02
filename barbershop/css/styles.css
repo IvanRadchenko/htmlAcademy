@@ -641,6 +641,11 @@ fieldset {
   padding: 10px;
 }
 
+.products__price_nopadding {
+  padding: 0;
+  margin-block-end: 70px;
+}
+
 .products-price {
   display: flex;
   align-items: center;
@@ -796,6 +801,7 @@ td {
 .main {
   width: 960px;
   margin: 0 auto;
+  margin-block-end: 50px;
 }
 
 .main_flex {
@@ -804,4 +810,62 @@ td {
 
 .main_flex-col {
   flex-direction: column;
+}
+
+.item__info {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.item__gallery {
+  max-width: 420px;;
+}
+
+
+.item__descr {
+  max-width: 450px;;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.descr__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.descr__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.descr__item {
+  position: relative;
+  padding-inline-start: 20px;
+}
+
+.descr__item::before {
+  position: absolute;
+  display: block;
+  content: "";
+  left: 0;
+  top: 6px;
+  transform: rotate(45deg);
+
+  width: 10px;
+  height: 10px;
+
+  background-color: #0D0D0D;
+}
+
+.descr__main {
+  margin-block-end: 50px;
 }
