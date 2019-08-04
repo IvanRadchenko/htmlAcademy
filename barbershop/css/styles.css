@@ -900,6 +900,10 @@ td {
   height: 561px;
 }
 
+.modal-map p {
+  margin: 0;
+}
+
 .modal-login {
   width: 300px;
   padding: 50px 80px;
