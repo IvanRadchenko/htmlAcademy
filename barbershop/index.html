@@ -222,10 +222,10 @@
     </div>
   </footer>
 
-  <section class="modal modal-login">
+  <section class="modal hidden modal-login">
     <h2>Personal Area</h2>
-    <p>Enter your login and password</p>
-    <form class="login-form" method="post" action="">
+    <p class="modal-descr">Enter your login and password</p>
+    <form class="login-form" method="post" action="#">
       <p>
         <label for="user-login" class="hidden">Login</label>
         <input id="user-login" class="login-icon-user" type="text" name="login" placeholder="Login">
@@ -241,7 +241,7 @@
           <span class="checkbox-indicator"></span>
           Remember me
         </label>
-        <a href="#" class="restore">Forgot password!</a>
+        <a href="#" class="link_restore">Forgot password!</a>
       </p>
 
       <button class="btn" type="submit">Login</button>
@@ -249,7 +249,7 @@
     <button class="modal-close" type="button">Close</button>
   </section>
 
-  <section class="modal modal-map">
+  <section class="hidden modal modal-map">
     <h2 class="hidden">How to find us</h2>
     <p>
       <img src="assets/map-form.png" width="780" height="560" alt="Visit us at: Box 564, Disneyland, USA">

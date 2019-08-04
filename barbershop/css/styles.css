@@ -252,17 +252,17 @@ input[type="radio"].hidden {
 }
 
 .breadcrumbs_black::after {
-   position: absolute;
-   display: block;
-   content: "";
-   right: -25px;
-   top: 8px;
-   transform: rotate(45deg);
+  position: absolute;
+  display: block;
+  content: "";
+  right: -25px;
+  top: 8px;
+  transform: rotate(45deg);
 
-   width: 10px;
-   height: 10px;
+  width: 10px;
+  height: 10px;
 
-   background-color: #0D0D0D;
+  background-color: #0D0D0D;
 }
 
 .breadcrumbs_white a {
@@ -752,17 +752,17 @@ fieldset {
 }
 
 .price__items::before {
-   position: absolute;
-   display: block;
-   content: "";
-   left: 0;
-   top: 6px;
-   transform: rotate(45deg);
+  position: absolute;
+  display: block;
+  content: "";
+  left: 0;
+  top: 6px;
+  transform: rotate(45deg);
 
-   width: 10px;
-   height: 10px;
+  width: 10px;
+  height: 10px;
 
-   background-color: #0D0D0D;
+  background-color: #0D0D0D;
 }
 
 .price__table {
@@ -831,12 +831,14 @@ td {
 
 
 .item__gallery {
-  max-width: 420px;;
+  max-width: 420px;
+  ;
 }
 
 
 .item__descr {
-  max-width: 450px;;
+  max-width: 450px;
+  ;
 }
 
 .list {
@@ -880,4 +882,131 @@ td {
 
 .descr__main {
   margin-block-end: 50px;
+}
+
+/* Modal window */
+.modal {
+  position: fixed;
+  color: #000000;
+}
+
+.modal-map {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 767px;
+  height: 561px;
+}
+
+.modal-login {
+  width: 300px;
+  padding: 50px 80px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
+    0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.modal-login h2 {
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.modal-descr {
+  margin: 0;
+  margin-block-end: 10px;
+}
+
+.login-form p {
+  margin: 0;
+  margin-block-end: 10px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 300px;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  padding-inline-end: 40px;
+
+}
+
+.login-icon-user {
+  background-image: url("/barbershop/svg/user.svg");
+  background-repeat: no-repeat;
+  background-position: 260px center;
+}
+
+.login-icon-password {
+  background-image: url("/barbershop/svg/lock.svg");
+  background-repeat: no-repeat;
+  background-position: 260px center;
+}
+
+.login-password-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.login-checkbox {
+  position: relative;
+  cursor: pointer;
+  padding-inline-start: 30px;
+}
+
+.login-checkbox::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  background-image: url("/barbershop/svg/cross.svg");
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-size: 14px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000101;
+}
+
+.link_restore {
+  text-decoration: underline;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.modal-close::before,
+.model-close::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  width: 19px;
+  height: 3px;
+
+  background-color: #0D0D0D;
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
 }
