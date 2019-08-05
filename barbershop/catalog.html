@@ -12,8 +12,7 @@
 
   <!-- Styles -->
   <link rel="preload" href="./css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="./css/styles.css"></noscript>
+  <noscript><link rel="stylesheet" href="./css/styles.css"></noscript>
 </head>
 
 <body class="body_catalog">
@@ -60,27 +59,27 @@
             <legend>Brands:</legend>
                 <ul class="filter-list">
                   <li class="filter-list__option filter-list__option_cross">
-                    <input class="hidden filter__input finter__input_checkbox" type="checkbox" name="baxter-california" id="filter-baxter" checked>
+                    <input class="hidden filter__input filter__input_checkbox" type="checkbox" name="baxter-california" id="filter-baxter" checked>
                     <label class="filter-input__label filter-input__label_mrgbig" for="filter-baxter">Baxter of California</label>
                   </li>
                   <li class="filter-list__option filter-list__option_cross">
-                    <input class="hidden filter__input finter__input_checkbox" type="checkbox" name="mr-natty" id="filter-natty">
+                    <input class="hidden filter__input filter__input_checkbox" type="checkbox" name="mr-natty" id="filter-natty">
                     <label class="filter-input__label filter-input__label_mrgbig" for="filter-natty">Mr Natty</label>
                   </li>
                   <li class="filter-list__option filter-list__option_cross">
-                    <input class="hidden filter__input finter__input_checkbox" type="checkbox" name="suavecito" id="filter-suavetico" checked>
+                    <input class="hidden filter__input filter__input_checkbox" type="checkbox" name="suavecito" id="filter-suavetico" checked>
                     <label class="filter-input__label filter-input__label_mrgbig" for="filter-suavetico">Suavecito</label>
                   </li>
                   <li class="filter-list__option filter-list__option_cross">
-                    <input class="hidden filter__input finter__input_checkbox" type="checkbox" name="malin-goetz" id="filter-malin-goetz">
+                    <input class="hidden filter__input filter__input_checkbox" type="checkbox" name="malin-goetz" id="filter-malin-goetz">
                     <label class="filter-input__label filter-input__label_mrgbig" for="filter-malin-goetz">Malin + Goetz</label>
                   </li>
                   <li class="filter-list__option filter-list__option_cross">
-                    <input class="hidden filter__input finter__input_checkbox" type="checkbox" name="murray" id="filter-murray">
+                    <input class="hidden filter__input filter__input_checkbox" type="checkbox" name="murray" id="filter-murray">
                     <label class="filter-input__label filter-input__label_mrgbig" for="filter-murray">Murray's</label>
                   </li>
                   <li class="filter-list__option filter-list__option_cross">
-                    <input class="hidden filter__input finter__input_checkbox" type="checkbox" name="american-crew" id="filter-american-crew" checked>
+                    <input class="hidden filter__input filter__input_checkbox" type="checkbox" name="american-crew" id="filter-american-crew" checked>
                     <label class="filter-input__label filter-input__label_mrgbig" for="filter-american-crew">American Crew</label>
                   </li>
                 </ul>
@@ -90,15 +89,15 @@
             <legend>Product Groups:</legend>
             <ul class="filter-list">
                 <li class="filter-list__option filter-list__option_circle">
-                  <input class=" filter__input finter__input_radio" type="radio" name="product=group" id="filter-shave" >
+                  <input class="hidden filter__input filter__input_radio" type="radio" name="product=group" id="filter-shave" >
                   <label class="filter-input__label filter-input__label_mrgradio" for="filter-shave">Shave stuff</label>
                 </li>
                 <li class="filter-list__option filter-list__option_circle">
-                  <input class=" filter__input finter__input_radio" type="radio" name="product=group" id="filter-care">
+                  <input class="hidden filter__input filter__input_radio" type="radio" name="product=group" id="filter-care">
                   <label class="filter-input__label filter-input__label_mrgradio" for="filter-care">Care stuff</label>
                 </li>
                 <li class="filter-list__option filter-list__option_circle">
-                  <input class=" filter__input finter__input_radio" type="radio" name="product=group" id="filter-accessories" >
+                  <input class="hidden filter__input filter__input_radio" type="radio" name="product=group" id="filter-accessories" >
                   <label class="filter-input__label filter-input__label_mrgradio" for="filter-accessories">Men's accessories</label>
                 </li>
             </ul>
@@ -288,18 +287,18 @@
 
  </footer>
 
- <section class="modal modal-login">
+ <section class="hidden modal modal-login">
    <h2>Personal Area</h2>
    <p>Enter your login and password</p>
    <form class="login-form" method="post" action="">
      <p>
        <label for="user-login" class="hidden">Login</label>
-       <input id="user-login" class="login-icon-user" type="text" name="login" placeholder="Login">
+       <input id="user-login" class="login-icon-user" type="text" name="login" placeholder="Login" autocomplete="on">
      </p>
 
      <p>
        <label for="user-password" class="hidden">Password</label>
-       <input id="user-password" class="login-icon-password" type="password" name="password" placeholder="Password">
+       <input id="user-password" class="login-icon-password" type="password" name="password" placeholder="Password" autocomplete="current-password">
      </p>
      <p class="login-password-info">
        <label class="login-checkbox">
