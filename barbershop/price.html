@@ -12,8 +12,7 @@
 
   <!-- Styles -->
   <link rel="preload" href="./css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="./css/styles.css"></noscript>
+  <noscript><link rel="stylesheet" href="./css/styles.css"></noscript>
 </head>
 
 <body class="body_catalog">
@@ -154,27 +153,27 @@
     </div>
   </footer>
 
-  <!-- //Modal Window -->
-  <section class="modal modal-login">
+  <section class="modal hidden modal-login">
     <h2>Personal Area</h2>
-    <p>Enter your login and password</p>
-    <form class="login-form" method="post" action="">
+    <p class="modal-descr">Enter your login and password</p>
+    <form class="login-form" method="post" action="#">
       <p>
         <label for="user-login" class="hidden">Login</label>
-        <input id="user-login" class="login-icon-user" type="text" name="login" placeholder="Login">
+        <input id="user-login" class="login-icon-user" type="text" name="login" placeholder="Login" autocomplete="on">
       </p>
 
       <p>
         <label for="user-password" class="hidden">Password</label>
-        <input id="user-password" class="login-icon-password" type="password" name="password" placeholder="Password">
+        <input id="user-password" class="login-icon-password" type="password" name="password" placeholder="Password"
+          autocomplete="current-password">
       </p>
-      <p>
-        <label for="login-password-info">
-          <input id="login-password-info" type="checkbox" name="remember" class="hidden">
+      <p class="login-password-info">
+        <label class="login-checkbox">
+          <input type="checkbox" name="remember" class="hidden">
           <span class="checkbox-indicator"></span>
           Remember me
         </label>
-        <a href="#" class="restore">Forgot password!</a>
+        <a href="#" class="link_restore">Forgot password!</a>
       </p>
 
       <button class="btn" type="submit">Login</button>

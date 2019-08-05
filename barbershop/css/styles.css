@@ -1,8 +1,6 @@
 html,
 body {
   box-sizing: border-box;
-  min-width: 1122px;
-  min-height: 1750px;
 }
 
 body {
@@ -16,7 +14,6 @@ body {
   color: #ffffff;
   text-transform: uppercase;
   background: #0D0D0D url("../assets/index-background.jpg") no-repeat top center;
-
 }
 
 .body_catalog {
@@ -92,10 +89,12 @@ input[type="radio"].hidden {
 }
 
 .btn__back {
+  width: 160px;
   bottom: 0;
 }
 
 .btn__next {
+  width: 160px;
   bottom: 0;
   right: 0;
 }
@@ -212,7 +211,6 @@ input[type="radio"].hidden {
 
 .nav-list__item_active::after {
   content: '';
-  display: inline-block;
   position: absolute;
 
   bottom: 0;
@@ -271,7 +269,6 @@ input[type="radio"].hidden {
 
 .breadcrumbs_black::after {
   position: absolute;
-  display: block;
   content: "";
   right: -25px;
   top: 8px;
@@ -357,7 +354,7 @@ legend,
 
 legend {
   padding: 0;
-  margin-block-end: 30px;
+  margin-block-end: 15px;
 }
 
 .about-us__text {
@@ -367,7 +364,7 @@ legend {
 fieldset {
   border: none;
   padding: 0;
-  margin-block-end: 48px;
+  margin-block-end:25px;
 }
 
 .block {
@@ -376,7 +373,7 @@ fieldset {
   justify-content: space-between;
   width: 960px;
   height: 419px;
-  padding: 59px 80px;
+  padding: 40px 80px;
   margin: 0 auto;
   margin-block-end: 35px;
 
@@ -391,6 +388,10 @@ fieldset {
 .block__item_news,
 .block__iteam_address {
   width: 380px;
+}
+.block__item_news {
+  display: flex;
+  flex-direction: column;
 }
 
 .block__iteam_address {
@@ -407,9 +408,8 @@ fieldset {
   position: relative;
 }
 
-.appointment,
 .block__item_gallery {
-  width: 300px;
+  width: 340px;
 }
 
 .news-date {
@@ -438,6 +438,11 @@ fieldset {
 
 .footer__address {
   width: 320px;
+}
+
+.footer__address a {
+  text-decoration: underline;
+  color: #ffffff;
 }
 
 .footer_txt-white {
@@ -506,36 +511,66 @@ fieldset {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 300px;
-  overflow: hidden;
+  max-width: 500px;
+}
+.appointment-form__row {
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-block-end: 20px;
 }
 
 .appointment-item {
+  flex: 1 0 200px;
+  display: inline-flex;
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 4px 4px 0 0;
+  overflow: visible;
   margin: 0;
-  margin-block-end: 10px;
-  max-width: 140px;
-}
-
-.appointment-item label {
-  display: block;
-  margin-block-end: 9px;
-  margin-inline-start: 15px;
+  height: 54px;
+  will-change: color;
 }
 
 .appointment-item input {
   width: 100%;
+  padding: 20px 16px 6px;
+  text-transform: inherit;
+  text-decoration: inherit;
   box-sizing: border-box;
-  padding-block-start: 8px;
-  padding-block-end: 15px;
-  padding-inline-start: 15px;
-  padding-block-end: 7px;
+  transition: opacity .15s cubic-bezier(.4, 0, .2, 1);
+  border: 2px rgba(104, 32, 32, 0.42) solid;
+  background:rgb(242, 242, 240);
 }
 
-.appointment-item input,
-.modal input {
-  font: inherit;
-  background-color: transparent;
-  border: 2px solid #000000;
+
+.appointment-item input:focus {
+  background-color: rgb(242, 242, 240,.3);
+  border-color:rgb(242, 242, 240);
+  outline: none;
+}
+
+.appointment-item label {
+  position: absolute;
+  left: 16px;
+  right: auto;
+  top: 16px;
+  pointer-events: none;
+  transform-origin: left top;
+  transition: transform .15s cubic-bezier(.4, 0, .2, 1),
+  color .15s cubic-bezier(.4, 0, .2, 1);
+  text-align: left;
+  white-space: nowrap;
+  cursor: text;
+  will-change: transform;
+}
+
+.appointment-item input:focus + label {
+  background-color: #242424;
+  padding: 2px 4px;
+  color: #F2F2F0;
+  transform: translateY(-80%) scale(.75);
+  z-index: 1;
 }
 
 /* Modal windows */
@@ -543,8 +578,10 @@ fieldset {
   color: #000000;
   background-color: #D9B573;
 }
-
 .modal input {
+  font: inherit;
+  background-color: transparent;
+  border: 2px solid #000000;
   text-transform: uppercase;
 }
 
@@ -563,6 +600,8 @@ fieldset {
 }
 
 .filter-list {
+  display: flex;
+  flex-direction: column;
   margin-block-start: 0;
 }
 
@@ -571,47 +610,80 @@ fieldset {
   cursor: pointer;
 }
 
-.filter-input__label:hover {
-  color: #663d15;
-}
-
 .filter-list__option {
-  margin-block-end: 15px;
+  height: 34px;
   position: relative;
 }
 
-.filter-input__label_mrgbig {
-  margin-inline-start: 43px;
-}
-
-.filter-input__label_mrgradio {
-  margin-inline-start: 17px;
-}
-
-.filter-list__option_cross::before {
-  content: "";
-  position: absolute;
+.filter-input__label {
+  box-sizing: border-box;
   display: block;
+  width: 100%;
+  height: 100%;
+  padding: 6px 0;
+}
+
+.filter-input__label:hover {
+  background-color: #bdac98;
+}
+
+.filter-input__label_mrgbig,
+.filter-input__label_mrgradio {
+  padding-inline-start: 30px;
+}
+
+.filter__input_checkbox,
+.filter__input_radio {
+  position: relative;
+}
+
+.filter__input_checkbox +label::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    border: 2px solid #000101;
+}
+
+.filter__input_checkbox:checked+label,
+.filter__input_radio:checked+label {
+    background-color: #d1b79a;
+}
+
+.filter__input_checkbox:checked+label::before {
   background-image: url("/barbershop/svg/cross.svg");
   background-repeat: no-repeat;
   background-position-x: 50%;
   background-position-y: 50%;
   background-size: 14px;
-  width: 20px;
-  height: 20px;
+}
+
+.filter__input_radio +label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
   border: 2px solid #000101;
 }
 
-.filter-list__option_circle::before {
+.filter__input_radio:checked+label::after {
   content: "";
   position: absolute;
-  display: block;
-  background-position-x: 50%;
-  background-position-y: 50%;
-  width: 20px;
-  height: 20px;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   border: 2px solid #000101;
+  background-color: #0D0D0D;
 }
 
 /* Catalog of products */
@@ -638,7 +710,14 @@ fieldset {
   font-weight: 400;
   line-height: 18px;
   margin-block-end: 20px;
-  box-shadow: 0 0 15px rgba(0, 1, 1, 0.2);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+  0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.25s ease-in-out;
+}
+
+.products__item:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+  0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 .products__image {
@@ -701,7 +780,7 @@ fieldset {
 
 .list__item_box a {
   display: block;
-  padding: 15px 20px;
+  padding: 9px 15px;
 
   text-align: center;
 }
@@ -770,7 +849,6 @@ fieldset {
 
 .price__items::before {
   position: absolute;
-  display: block;
   content: "";
   left: 0;
   top: 6px;
@@ -849,13 +927,11 @@ td {
 
 .item__gallery {
   max-width: 420px;
-  ;
 }
 
 
 .item__descr {
   max-width: 450px;
-  ;
 }
 
 .list {
@@ -885,7 +961,6 @@ td {
 
 .descr__item::before {
   position: absolute;
-  display: block;
   content: "";
   left: 0;
   top: 6px;
@@ -985,7 +1060,6 @@ td {
 .login-checkbox::before {
   content: "";
   position: absolute;
-  display: block;
   top: 0;
   left: 0;
   background-image: url("/barbershop/svg/cross.svg");

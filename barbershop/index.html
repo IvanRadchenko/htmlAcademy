@@ -14,8 +14,7 @@
   <!-- Styles -->
   <link rel="preconnect" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <link rel="preload" href="./css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="./css/styles.css"></noscript>
+  <noscript><link rel="stylesheet" href="./css/styles.css"></noscript>
 
 
 </head>
@@ -141,25 +140,28 @@
           <h2 class="block__title">Pick up the date</h2>
           <p class="appointment-info">Pickup the date and time and we'll get back to you</p>
           <form action="#" method="post" class="appointment-form">
-            <p class="appointment-item">
-              <label for="appointment-date">Date</label>
-              <input type="text" name="date" id="appointment-date" placeholder="08.01.2020">
-            </p>
+            <div class="appointment-form__row">
+              <p class="appointment-item">
+                <input type="date" name="date" id="appointment-date" required>
+                <label for="appointment-date">Date</label>
+              </p>
 
-            <p class="appointment-item">
-              <label for="appointment-time">Time</label>
-              <input type="text" name="time" id="appointment-time" placeholder="10:00">
-            </p>
+              <p class="appointment-item">
+                <input type="time" name="time" id="appointment-time" required>
+                <label for="appointment-time">Time</label>
+              </p>
+            </div>
+            <div class="appointment-form__row">
+              <p class="appointment-item">
+                <input type="text" name="name" value id="appointment-name" autocomplete="name" required>
+                <label for="appointment-name">Name</label>
+              </p>
 
-            <p class="appointment-item">
-              <label for="appointment-name">Name</label>
-              <input type="text" name="name" value="Ivan" id="appointment-name">
-            </p>
-
-            <p class="appointment-item">
-              <label for="appointment-phone">Phone</label>
-              <input type="tel" name="phone" value="" placeholder="+3 333 333-33-33" id="appointment-phone">
-            </p>
+              <p class="appointment-item">
+                <input type="tel" name="phone" value placeholder="" id="appointment-phone" autocomplete="tel" required>
+                <label for="appointment-phone">Phone</label>
+              </p>
+            </div>
             <button class="btn btn_wide" type="submit">Send</button>
           </form>
 
@@ -228,12 +230,13 @@
     <form class="login-form" method="post" action="#">
       <p>
         <label for="user-login" class="hidden">Login</label>
-        <input id="user-login" class="login-icon-user" type="text" name="login" placeholder="Login">
+        <input id="user-login" class="login-icon-user" type="text" name="login" placeholder="Login" autocomplete="on">
       </p>
 
       <p>
         <label for="user-password" class="hidden">Password</label>
-        <input id="user-password" class="login-icon-password" type="password" name="password" placeholder="Password">
+        <input id="user-password" class="login-icon-password" type="password" name="password" placeholder="Password"
+          autocomplete="current-password">
       </p>
       <p class="login-password-info">
         <label class="login-checkbox">
