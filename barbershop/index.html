@@ -131,7 +131,7 @@
             </p>
           </div>
           <div class="block__footer">
-            <a class="btn btn_mrg-right" href="#">Route me</a>
+            <a class="btn btn_mrg-right show-map" href="#">Route me</a>
             <a class="btn" href="#">Call us</a>
           </div>
         </div>
@@ -188,7 +188,7 @@
       <address class="footer__address">
         Written by <a href="mailto:webmaster@example.com">Jon Doe</a>.<br>
         Visit us at: Box 564, Disneyland, USA<br>
-        <a class="footer-address__link" href="#">Find us on Google Maps</a><br>
+        <a class="footer-address__link show-map" href="#">Find us on Google Maps</a><br>
         Call us: +0 (000) 000-00-00<br>
         <p></p>
       </address>
@@ -257,16 +257,96 @@
 
       <button class="btn" type="submit">Login</button>
     </form>
-    <button class="modal-close" type="button">Close</button>
+    <button class="modal-close modal-close_login" type="button">Close</button>
   </section>
 
   <section class="hidden modal modal-map">
     <h2 class="hidden">How to find us</h2>
-    <p>
-      <img src="assets/map-form.png" width="780" height="560" alt="Visit us at: Box 564, Disneyland, USA">
-    </p>
-    <button class="modal-close" type="button">Close</button>
+    <div class="mapouter">
+      <div class="gmap_canvas"><iframe width="780" height="560" id="gmap_canvas"
+          src="https://maps.google.com/maps?q=%D0%A2%D0%B2%D0%B5%D1%80%D1%81%D0%BA%D0%B0%D1%8F%20%D1%83%D0%BB.%2020&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>
+    </div>
+    <a class="modal-close modal-close_map ">Close</a>
   </section>
+
+<script>
+  let closeFormByKeys = function closeModalWindowsForms(targetForm) {
+    let toogleHiddenForm = () => {targetForm.classList.add('hidden')};
+    let pressEscape = (e) => {
+
+      if (e.code === 'Escape') {
+        toogleHiddenForm();
+      }
+
+    };
+
+    document.addEventListener('keydown', pressEscape);
+
+    // let bodyHtml = document.querySelector('body');
+    // let hideIfClickedNotOnModal = (e) => {
+
+    //   if (e.target.closest(".modal")) {
+    //     console.log(e.target)
+    //     return;
+    //   }
+
+    //   toogleHiddenForm();
+    // }
+
+    // bodyHtml.addEventListener('click', hideIfClickedNotOnModal);
+
+
+    let closeFormBtn = targetForm.querySelector('.modal-close');
+    closeFormBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      toogleHiddenForm();
+    })
+  };
+
+  // let addAnimation = () => {
+
+  // };
+
+  let toogleLoginForm = function showLoginForm() {
+    let loginLink = document.querySelector('.login-link');
+
+    loginLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      let loginForm = document.querySelector('.modal-login');
+      loginForm.classList.remove('hidden');
+
+      closeFormByKeys(loginForm);
+    });
+  }
+
+  let toogleMap = function showMap() {
+    let btnShowMap = document.querySelectorAll('.show-map');
+    let nodes = [...btnShowMap];
+
+    nodes.forEach((node) => {
+      node.addEventListener('click', (e) => {
+        e.preventDefault();
+        let map = document.querySelector('.modal-map');
+        map.classList.remove('hidden');
+        let mapCloseBtn = document.querySelector('.modal-close_map');
+        mapCloseBtn.classList.add('modal-close_shuffle');
+        closeFormByKeys(map);
+      });
+    });
+
+  };
+
+  toogleLoginForm();
+  toogleMap();
+
+
+
+
+
+
+
+</script>
 
 </body>
 
