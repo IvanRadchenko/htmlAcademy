@@ -152,7 +152,7 @@ input[type="radio"].hidden {
   width: 620px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
   align-items: center;
 }
 
@@ -188,9 +188,14 @@ input[type="radio"].hidden {
   padding-inline-start: 0;
 }
 
+.nav-list__item {
+  flex: 1 0 auto;
+}
+
 .nav-list__link,
 .login-link {
   display: block;
+  text-align: center;
   color: #ffffff;
   padding: 25px 20px;
 }
@@ -209,7 +214,6 @@ input[type="radio"].hidden {
 .nav-list__item_active::after {
   content: '';
   position: absolute;
-
   bottom: 0;
   height: 5px;
   width: 100%;
