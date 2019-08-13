@@ -14,7 +14,8 @@
   <!-- Styles -->
   <link rel="preconnect" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <link rel="preload" href="./css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="./css/styles.css"></noscript>
+  <noscript>
+    <link rel="stylesheet" href="./css/styles.css"></noscript>
 
 
 </head>
@@ -150,7 +151,7 @@
 
               <div class="appointment-item">
                 <input type="time" name="time" id="appointment-time" required>
-                 <div class="appointment-label">
+                <div class="appointment-label">
                   <label for="appointment-time">Time</label>
                 </div>
               </div>
@@ -158,14 +159,14 @@
             <div class="appointment-form__row">
               <div class="appointment-item">
                 <input type="text" name="name" value id="appointment-name" autocomplete="name" required>
-                 <div class="appointment-label">
+                <div class="appointment-label">
                   <label for="appointment-name">Name</label>
                 </div>
               </div>
 
               <div class="appointment-item">
                 <input type="tel" name="phone" value placeholder="" id="appointment-phone" autocomplete="tel" required>
-                 <div class="appointment-label">
+                <div class="appointment-label">
                   <label for="appointment-phone">Phone</label>
                 </div>
               </div>
@@ -232,41 +233,165 @@
     </div>
   </footer>
 
-  <section class="modal hidden modal-login">
-    <h2>Personal Area</h2>
-    <p class="modal-descr">Enter your login and password</p>
-    <form class="login-form" method="post" action="#">
-      <p>
-        <label for="user-login" class="hidden">Login</label>
-        <input id="user-login" class="login-icon-user" type="text" name="login" placeholder="Login" autocomplete="on">
-      </p>
+  <div class="modal-root modal-root_login">
+    <section class="modal hidden modal-login">
+      <h2>Personal Area</h2>
+      <p class="modal-descr">Enter your login and password</p>
+      <form class="login-form" method="post" action="#">
+        <p>
+          <label for="user-login" class="hidden">Login</label>
+          <input id="user-login" class="login-icon-user" type="text" name="login" placeholder="Login" autocomplete="on">
+        </p>
 
-      <p>
-        <label for="user-password" class="hidden">Password</label>
-        <input id="user-password" class="login-icon-password" type="password" name="password" placeholder="Password"
-          autocomplete="current-password">
-      </p>
-      <p class="login-password-info">
-        <label class="login-checkbox">
-          <input type="checkbox" name="remember" class="hidden">
-          <span class="checkbox-indicator"></span>
-          Remember me
-        </label>
-        <a href="#" class="link_restore">Forgot password!</a>
-      </p>
+        <p>
+          <label for="user-password" class="hidden">Password</label>
+          <input id="user-password" class="login-icon-password" type="password" name="password" placeholder="Password"
+            autocomplete="current-password">
+        </p>
+        <p class="login-password-info">
+          <label class="login-checkbox">
+            <input type="checkbox" name="remember" class="hidden">
+            <span class="checkbox-indicator"></span>
+            Remember me
+          </label>
+          <a href="#" class="link_restore">Forgot password!</a>
+        </p>
 
-      <button class="btn" type="submit">Login</button>
-    </form>
-    <button class="modal-close" type="button">Close</button>
-  </section>
+        <button class="btn" type="submit">Login</button>
+      </form>
+      <button class="modal-close modal-close_login" type="button">Close</button>
+    </section>
 
-  <section class="hidden modal modal-map">
-    <h2 class="hidden">How to find us</h2>
-    <p>
-      <img src="assets/map-form.png" width="780" height="560" alt="Visit us at: Box 564, Disneyland, USA">
-    </p>
-    <button class="modal-close" type="button">Close</button>
-  </section>
+
+    <section class="hidden modal modal-map">
+      <h2 class="hidden">How to find us</h2>
+      <div class="mapouter">
+        <div class="gmap_canvas"><iframe width="780" height="560" id="gmap_canvas"
+            src="https://maps.google.com/maps?q=%D0%A2%D0%B2%D0%B5%D1%80%D1%81%D0%BA%D0%B0%D1%8F%20%D1%83%D0%BB.%2020&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>
+      </div>
+      <a class="modal-close modal-close_map ">Close</a>
+    </section>
+  </div>
+
+  <script>
+    const queryDoc = (element) => document.querySelector(element);
+    const query = (targetElement, element) => targetElement.querySelector(element);
+
+    let addClass = function addClassName(target, targetClassName) {
+      target.classList.add(targetClassName);
+    };
+
+    let removeClass = function removeClassName(target, targetClassName) {
+      target.classList.remove(targetClassName);
+    }
+
+    let toogleShuffleAnimation = function shuffle() {
+      let mapCloseBtn = queryDoc('.modal-close_map');
+      let shuffleOn = () => addClass(mapCloseBtn, 'modal-close_shuffle');
+      let shuffleOff = () => removeClass(mapCloseBtn, 'modal-close_shuffle');
+
+      return {
+        on: shuffleOn,
+        off: shuffleOff
+      }
+    }
+
+    let toogleModalRoot = function makeRootVisible() {
+      let rootModal = queryDoc('.modal-root');
+      let showRootModal = () => addClass(rootModal, 'modal-root_visible');
+      let hideRootModal = () => removeClass(rootModal, 'modal-root_visible');
+
+      return {
+        hide: hideRootModal,
+        show: showRootModal
+      }
+    }
+
+
+    let closeFormByKeys = function closeModalWindowsForms(targetForm) {
+      let cleanAllAnimationsAndListeners = () => {
+        addClass(targetForm, 'hidden');
+        toogleShuffleAnimation().off();
+        toogleModalRoot().hide();
+        removeEscapeListener();
+        removeRootModalListener();
+      }
+
+      // Modal root listener
+      let rootModal = queryDoc('.modal-root');
+      let addRootModalListener = () => rootModal.addEventListener('click', function(e) {
+        if (e.target.className.includes('modal-root'))
+          cleanAllAnimationsAndListeners();
+      }, false);
+      let removeRootModalListener = () => rootModal.removeEventListener('click', toogleModalRoot().hide, false);
+
+      // Escape Listener for hidden Forms
+      let pressEscapeHandler = (e) => {
+        if (e.code === 'Escape') {
+          cleanAllAnimationsAndListeners();
+          removebtnShowFormsListener();
+        }
+      };
+
+      let addEscapeListener = () => document.addEventListener('keydown', pressEscapeHandler, false);
+      let removeEscapeListener = () => document.removeEventListener('keydown', pressEscapeHandler, false);
+
+      // Close Buttons Listener for Hidden forms and map
+      let closeFormBtn = query(targetForm, '.modal-close');
+      let showFormsHandler = (e) => {
+        e.preventDefault();
+        cleanAllAnimationsAndListeners();
+      };
+
+      let addbtnShowFormsListener = () => closeFormBtn.addEventListener('click', showFormsHandler, {
+        once: true
+      });
+      let removebtnShowFormsListener = () => closeFormBtn.removeEventListener('click', showFormsHandler, false);
+
+
+      return {
+        addHiddenFormListeners() {
+          addEscapeListener();
+          addbtnShowFormsListener();
+          addRootModalListener();
+        }
+      };
+    };
+
+    let toogleLoginForm = function showLoginForm() {
+      let loginLink = queryDoc('.login-link');
+
+      loginLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        let loginForm = queryDoc('.modal-login');
+        removeClass(loginForm, 'hidden');
+        toogleModalRoot().show();
+        closeFormByKeys(loginForm).addHiddenFormListeners();
+      });
+    }
+
+    let toogleMap = function showMap() {
+      let btnShowMap = document.querySelectorAll('.show-map');
+      let nodes = [...btnShowMap];
+
+      nodes.forEach((node) => {
+        node.addEventListener('click', (e) => {
+          e.preventDefault();
+          let map = queryDoc('.modal-map');
+          removeClass(map, 'hidden');
+          toogleModalRoot().show();
+          toogleShuffleAnimation().on();
+          closeFormByKeys(map).addHiddenFormListeners();
+        });
+      });
+
+    };
+
+    toogleLoginForm();
+    toogleMap();
+
+  </script>
 
 </body>
 
