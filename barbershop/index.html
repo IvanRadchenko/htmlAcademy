@@ -320,9 +320,10 @@
 
       // Modal root listener
       let rootModal = queryDoc('.modal-root');
-      let addRootModalListener = () => rootModal.addEventListener('click', cleanAllAnimationsAndListeners, {
-        once : true
-      });
+      let addRootModalListener = () => rootModal.addEventListener('click', function(e) {
+        if (e.target.className.includes('modal-root'))
+          cleanAllAnimationsAndListeners();
+      }, false);
       let removeRootModalListener = () => rootModal.removeEventListener('click', toogleModalRoot().hide, false);
 
       // Escape Listener for hidden Forms
