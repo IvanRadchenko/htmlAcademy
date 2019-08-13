@@ -451,8 +451,11 @@ fieldset {
 
 /* Social links block */
 .footer-address__link {
-  text-decoration: underline;
   color: #ffffff;
+}
+
+.footer-address__link_underline {
+  text-decoration: underline;
 }
 
 .footer .container {
