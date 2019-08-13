@@ -1172,27 +1172,31 @@ td {
 .login-password-info {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
-.login-checkbox {
+.login-checkbox__label {
   position: relative;
   cursor: pointer;
-  padding-inline-start: 30px;
+  padding-inline-start: 25px;
 }
 
-.login-checkbox::before {
+.login-checkbox__input+.login-checkbox__label::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: 2.5px;
   left: 0;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #000101;
+}
+
+.login-checkbox__input:checked+.login-checkbox__label::before {
   background-image: url("/barbershop/svg/cross.svg");
   background-repeat: no-repeat;
   background-position-x: 50%;
   background-position-y: 50%;
-  background-size: 14px;
-  width: 20px;
-  height: 20px;
-  border: 2px solid #000101;
+  background-size: 12px;
 }
 
 .link_restore {
