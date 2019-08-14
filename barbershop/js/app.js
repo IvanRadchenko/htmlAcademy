@@ -113,3 +113,40 @@ let toogleMap = function showMap() {
 
 toogleLoginForm();
 toogleMap();
+
+
+// Input Observers
+let scheduleForm = queryDoc('.appointment-form');
+
+let queryFormElements = (formName) => {
+  let row = scheduleForm.querySelectorAll('.appointment-form__row')[1];
+  let labels = row.querySelectorAll('.appointment-label');
+  let inputCollection = row.querySelectorAll('input');
+  let focusClass = 'appointment-label_focused';
+  let inputs = [...inputCollection];
+
+  return {
+    labels: labels,
+    inputs: inputs,
+    focus: focusClass
+  }
+}
+
+let observeInputChange = function trackInputActivity() {
+  let labels = queryFormElements(scheduleForm).labels;
+  let inputs = queryFormElements(scheduleForm).inputs;
+
+  inputs.forEach((item,index)=> {
+    let valLength = item.value.length;
+    let focus = queryFormElements(scheduleForm).focus;
+
+    if (valLength ) {
+      addClass(labels[index], focus);
+    } else {
+      removeClass(labels[index], focus);
+    }
+
+  });
+}
+
+scheduleForm.addEventListener('input', observeInputChange);
