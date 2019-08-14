@@ -113,4 +113,3 @@ let toogleMap = function showMap() {
 
 toogleLoginForm();
 toogleMap();
-
