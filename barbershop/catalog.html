@@ -238,14 +238,14 @@
 </section>
 
  <footer class="footer footer_txt-white">
-  <div class="container">
-    <address class="footer__address">
-      Written by <a href="mailto:webmaster@example.com">Jon Doe</a>.<br>
-      Visit us at: Box 564, Disneyland, USA<br>
-      <a class="footer-address__link" href="#">Find us on Google Maps</a><br>
-      Call us: +0 (000) 000-00-00<br>
-      <p></p>
-    </address>
+   <div class="container">
+     <address class="footer__address">
+       Written by <a href="mailto:webmaster@example.com">Jon Doe</a>.<br>
+       Visit us at: Box 564, Disneyland, USA<br>
+       <a class="footer-address__link" href="#">Find us on Google Maps</a><br>
+       Call us: +0 (000) 000-00-00<br>
+       <p></p>
+     </address>
 
     <div class="soc">
       <p class="soc__title">Poke us on socials</p>
@@ -287,32 +287,46 @@
 
  </footer>
 
- <section class="hidden modal modal-login">
-   <h2>Personal Area</h2>
-   <p>Enter your login and password</p>
-   <form class="login-form" method="post" action="echo.htmlacademy.ru">
-     <p>
-       <label for="user-login" class="hidden">Login</label>
-       <input id="user-login" class="login-icon-user" type="text" name="login" placeholder="Login" autocomplete="on">
-     </p>
+ <div class="modal-root modal-root_login">
+   <section class="modal hidden modal-login">
+     <h2>Personal Area</h2>
+     <p class="modal-descr">Enter your login and password</p>
+     <form class="login-form" method="post" action="#">
+       <p>
+         <label for="user-login" class="hidden">Login</label>
+         <input id="user-login" class="login-icon-user" type="text" name="login" placeholder="Login" autocomplete="on">
+       </p>
 
-     <p>
-       <label for="user-password" class="hidden">Password</label>
-       <input id="user-password" class="login-icon-password" type="password" name="password" placeholder="Password" autocomplete="current-password">
-     </p>
-     <p class="login-password-info">
-       <label class="login-checkbox">
-         <input type="checkbox" name="remember" class="hidden">
-         <span class="checkbox-indicator"></span>
-         Remember me
-       </label>
-       <a href="#" class="restore">Forgot password!</a>
-     </p>
+       <p>
+         <label for="user-password" class="hidden">Password</label>
+         <input id="user-password" class="login-icon-password" type="password" name="password" placeholder="Password"
+           autocomplete="current-password">
+       </p>
+       <p class="login-password-info">
+         <input id="login-remember" type="checkbox" name="remember" class="login-checkbox__input hidden">
+         <label for="login-remember" class="login-checkbox__label">
+           Remember me
+         </label>
+         <a href="#" class="link_restore">Forgot password!</a>
+       </p>
 
-     <button class="btn" type="submit">Login</button>
-   </form>
-   <button class="modal-close" type="button">Close</button>
- </section>
+       <button class="btn" type="submit">Login</button>
+     </form>
+     <button class="modal-close modal-close_login" type="button">Close</button>
+   </section>
+
+
+   <section class="hidden modal modal-map">
+     <h2 class="hidden">How to find us</h2>
+     <div class="mapouter">
+       <div class="gmap_canvas"><iframe width="780" height="560" id="gmap_canvas"
+           src="https://maps.google.com/maps?q=%D0%A2%D0%B2%D0%B5%D1%80%D1%81%D0%BA%D0%B0%D1%8F%20%D1%83%D0%BB.%2020&t=&z=13&ie=UTF8&iwloc=&output=embed"
+           frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>
+     </div>
+     <a class="modal-close modal-close_map ">Close</a>
+   </section>
+ </div>
+ <script src="./js/app.js"></script>
 </body>
 
 </html>
