@@ -1,7 +1,7 @@
 const queryDoc = (element) => document.querySelector(element);
 const query = (targetElement, element) => targetElement.querySelector(element);
 
-let addClass = function addClassName(target, targetClassName) {
+const addClass = (target, targetClassName) => {
   target.classList.add(targetClassName);
 };
 
@@ -11,12 +11,12 @@ let removeClass = function removeClassName(target, targetClassName) {
 
 let toogleShuffleAnimation = function shuffle() {
   let mapCloseBtn = queryDoc('.modal-close_map');
-  let shuffleOn = () => addClass(mapCloseBtn, 'modal-close_shuffle');
-  let shuffleOff = () => removeClass(mapCloseBtn, 'modal-close_shuffle');
+  let on = () => addClass(mapCloseBtn, 'modal-close_shuffle');
+  let off = () => removeClass(mapCloseBtn, 'modal-close_shuffle');
 
   return {
-    on: shuffleOn,
-    off: shuffleOff
+    on,
+    off,
   }
 }
 
@@ -31,12 +31,15 @@ let toogleModalRoot = function makeRootVisible() {
   }
 }
 
+// 1
+const hideShow = toogleModalRoot();
+
 
 let closeFormByKeys = function closeModalWindowsForms(targetForm) {
   let cleanAllAnimationsAndListeners = () => {
     addClass(targetForm, 'hidden');
     toogleShuffleAnimation().off();
-    toogleModalRoot().hide();
+    hideShow.hide();
     removeEscapeListener();
     removeRootModalListener();
   }
@@ -47,7 +50,7 @@ let closeFormByKeys = function closeModalWindowsForms(targetForm) {
     if (e.target.className.includes('modal-root'))
       cleanAllAnimationsAndListeners();
   }, false);
-  let removeRootModalListener = () => rootModal.removeEventListener('click', toogleModalRoot().hide, false);
+  let removeRootModalListener = () => rootModal.removeEventListener('click', hideShow.hide, false);
 
   // Escape Listener for hidden Forms
   let pressEscapeHandler = (e) => {
@@ -63,7 +66,7 @@ let closeFormByKeys = function closeModalWindowsForms(targetForm) {
   // Close Buttons Listener for Hidden forms and map
   let closeFormBtn = query(targetForm, '.modal-close');
   let showFormsHandler = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     cleanAllAnimationsAndListeners();
   };
 
@@ -126,27 +129,30 @@ let queryFormElements = (formName) => {
   let inputs = [...inputCollection];
 
   return {
-    labels: labels,
-    inputs: inputs,
+    labels,
+    inputs,
     focus: focusClass
   }
 }
 
 let observeInputChange = function trackInputActivity() {
-  let labels = queryFormElements(scheduleForm).labels;
-  let inputs = queryFormElements(scheduleForm).inputs;
+  const {
+    inputs,
+    labels,
+    focus
+  } = queryFormElements(scheduleForm);
 
-  inputs.forEach((item,index)=> {
-    let valLength = item.value.length;
-    let focus = queryFormElements(scheduleForm).focus;
+  inputs.forEach((item, index) => {
+    const isValHasLength = Boolean(item.value.length);
 
-    if (valLength ) {
+    isValHasLength ?
+      removeClass(labels[index], focus) :
       addClass(labels[index], focus);
-    } else {
-      removeClass(labels[index], focus);
-    }
-
   });
 }
 
 scheduleForm.addEventListener('input', observeInputChange);
+
+export {
+  observeInputChange,
+};
