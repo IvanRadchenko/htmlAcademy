@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <!--   <link rel="preload" href="./fonts/web/ptsansnarrowbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/web/ptsansnarrow.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="./css/styles.css"></noscript> -->
+</head>
+
+<body class="body_catalog">
+  <%= require('html-loader!./partials/header-all.html') %>
+
+
+
+  <section class="main main_flex main_flex-col">
+    <section class="breadcrumbs">
+      <h1 class="breadcrumbs__title">Price-List</h1>
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item breadcrumbs_black"><a href="./index.html">Main</a></li>
+        <li class="breadcrumbs__item breadcrumbs_white"><a href="#">{breadcrumbs__title}</a></li>
+      </ul>
+    </section>
+
+    <h2 class="title__price">
+      A real man's classic
+    </h2>
+
+    <section class="price__descr">
+      <div class="price__container price__container_w400">
+        <p class="price__container-title">Parners with best brands</p>
+        <ul class="price__list">
+          <li class="price__items">Some Brand</li>
+          <li class="price__items">Some Brand</li>
+          <li class="price__items">Some Brand</li>
+          <li class="price__items">Some Brand</li>
+        </ul>
+      </div>
+
+      <div class="price__container price__container_w600">
+        <p class="price__container-title">Our price list</p>
+        <table class="price__table" border="1">
+          <tbody>
+            <tr>
+              <td class="td__service">Haircut</td>
+              <td class="td__price">1500</td>
+            </tr>
+            <tr>
+              <td class="td__service">Beardcut</td>
+              <td class="td__price">500</td>
+            </tr>
+            <tr>
+              <td class="td__service">Beardy stuff with beard</td>
+              <td class="td__price">350</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="about-us">
+      <p class="about-us__title">About us</p>
+      <div class="about-us__container">
+        <p class="about-us__text about-us_w400">Наша парикмахерская занимается исключительно мужскими стрижками. Стрижка
+          каждого клиента для нас - это уникальная
+          и продуманная до мелочей работа. Мы не работаем на количество, мы делаем качество.</p>
+        <p class="about-us__text about-us_w600">Наша мастерская расположена в центре города, поэтому сделать стильную
+          стрижку можно в
+          любое время, даже в
+          обеденный перерыв. Здесь вы можете погрузиться в удобную для вас атмосферу, чувствовать себя комфортно и
+          свободно!
+        </p>
+      </div>
+    </section>
+
+  </section>
+
+<%= require('html-loader!./partials/footer-all.html') %>
+<div class="modal-root modal-root_login">
+  <%= require('html-loader!./partials/form-login.html') %>
+  <%= require('html-loader!./partials/map.html') %>
+</div>
+</body>
+
+</html>

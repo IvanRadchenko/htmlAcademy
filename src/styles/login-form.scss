@@ -1,0 +1,65 @@
+/* Login Modal Window */
+.login-form p {
+  margin: 0;
+  margin-block-end: 10px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 300px;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  padding-inline-end: 40px;
+
+}
+
+.login-icon-user {
+  background-image: url("../images/user.svg");
+  background-repeat: no-repeat;
+  background-position: 260px center;
+}
+
+.login-icon-password {
+  background-image: url("../images/lock.svg");
+  background-repeat: no-repeat;
+  background-position: 260px center;
+}
+
+.login-password-info {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.login-checkbox__label {
+  position: relative;
+  cursor: pointer;
+  padding-inline-start: 25px;
+}
+
+.login-checkbox:hover,
+.login-checkbox:focus {
+  color: $color-white;
+}
+
+.login-checkbox__input+.login-checkbox__label::before {
+  content: "";
+  position: absolute;
+  top: 2.5px;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border: 2px solid $color-dark2;
+}
+
+.login-checkbox__input:checked+.login-checkbox__label::before {
+  background-image: url("../images/cross.svg");
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-size: 12px;
+}
+
+.link_restore {
+  text-decoration: underline;
+}

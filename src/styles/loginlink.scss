@@ -1,0 +1,32 @@
+/* Login Link */
+.login-link {
+  text-align: center;
+  color: $color-white;
+  padding: 25px 20px;
+  display: block;
+  padding-inline-start: 50px;
+  position: relative;
+}
+
+.login-link:hover,
+.login-link:focus {
+  background-color: $color-dark3;
+}
+
+.login-link::before {
+  position: absolute;
+  content: "";
+  left: 10px;
+  opacity: 0.3;
+  width: 16px;
+  height: 18px;
+  background-image: url("../images/login.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.login-link:hover::before,
+.login-link:focus::before,
+.login-link:active::before {
+  opacity: 1;
+}

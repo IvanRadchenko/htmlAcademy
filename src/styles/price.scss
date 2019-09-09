@@ -1,0 +1,167 @@
+/* Price page */
+.title__price {
+  position: relative;
+  font-size: 48px;
+  font-weight: $font-weigth-400;
+  line-height: 48px;
+  align-self: center;
+  margin-block-end: 40px;
+}
+
+.title__price::before {
+  content: '_______';
+  position: absolute;
+  left: -200px;
+  top: -20px;
+}
+
+.title__price::after {
+  content: '_______';
+  position: absolute;
+  left: 560px;
+  top: -20px;
+}
+
+/* Price Containers on price page */
+.price__container-title {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: $font-weigth-400;
+}
+
+.price__container_w400 {
+  width: 400px;
+  margin-inline-end: 100px;
+}
+
+.price__container_w600 {
+  width: 600px;
+}
+
+.price__items {
+  position: relative;
+  margin-block-end: 15px;
+  padding-inline-start: 20px;
+}
+
+.price__items::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 6px;
+  transform: rotate(45deg);
+  width: 10px;
+  height: 10px;
+  background-color: $color-darkgrey;
+}
+
+.price__table {
+  border-collapse: collapse;
+  border-color: $color-dark;
+  border-width: 2px;
+  width: 100%;
+
+}
+
+td {
+  padding: 15px;
+  width: 200px;
+  border-width: 2px;
+}
+
+.td__price {
+  text-align: center;
+}
+
+/* Item styles */
+.descr__id {
+  color: $color-darkgrey;
+}
+
+.price__descr {
+  display: flex;
+  justify-content: space-between;
+  margin-block-end: 50px;
+}
+
+.price__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*Price Flex layout */
+.main {
+  width: 960px;
+  margin: 0 auto;
+  margin-block-end: 50px;
+}
+
+.main_flex {
+  display: flex;
+}
+
+.main_flex-col {
+  flex-direction: column;
+}
+
+.item__info {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.item__gallery {
+  max-width: 420px;
+}
+
+
+.item__descr {
+  max-width: 450px;
+}
+
+.list {
+  list-style: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.descr__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.descr__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.descr__item {
+  position: relative;
+  padding-inline-start: 20px;
+}
+
+.descr__item::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 6px;
+  transform: rotate(45deg);
+
+  width: 10px;
+  height: 10px;
+
+  background-color: $color-darkgrey;
+}
+
+.descr__main {
+  margin-block-end: 50px;
+}

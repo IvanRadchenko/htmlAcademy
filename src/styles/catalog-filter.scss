@@ -1,0 +1,119 @@
+/* Filter Form */
+legend {
+  padding: 0;
+  margin-block-end: 15px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: $font-weigth-400;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin-block-end: 25px;
+}
+
+.filters {
+  flex: 1 0 auto;
+
+  &-list {
+      list-style: none;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      padding-inline-start: 0;
+      display: flex;
+      flex-direction: column;
+      margin-block-start: 0;
+
+      &__option {
+          height: 34px;
+          position: relative;
+      }
+  }
+
+  &__input {
+    @extend %pointer;
+
+    &__label {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 6px 0;
+    }
+
+    &_checkbox,
+    &_radio {
+      position: relative;
+    }
+  }
+
+  &-input__label {
+    @extend %pointer;
+
+    &:hover {
+      background-color: $color-beige;
+    }
+
+    &_mrgbig,
+    &_mrgradio {
+      padding-inline-start: 30px;
+    }
+  }
+
+
+
+}
+
+%pointer {
+  cursor: pointer;
+}
+
+.filter__input_checkbox+label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  border: 2px solid $color-dark2;
+}
+
+.filter__input_checkbox:checked+label,
+.filter__input_radio:checked+label {
+  background-color: $color-light;
+}
+
+.filter__input_checkbox:checked+label::before {
+  background-image: url("../images/cross.svg");
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-size: 14px;
+}
+
+.filter__input_radio+label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid $color-dark2;
+}
+
+.filter__input_radio:checked+label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  border: 2px solid $color-dark2;
+  background-color: $color-darkgrey;
+}

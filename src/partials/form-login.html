@@ -1,0 +1,26 @@
+<section class="modal hidden modal-login">
+  <h2>Personal Area</h2>
+  <p class="modal-descr">Enter your login and password</p>
+  <form class="login-form" method="post" action="#">
+    <p>
+      <label for="user-login" class="hidden">Login</label>
+      <input id="user-login" class="login-icon-user" type="text" name="login" placeholder="Login" autocomplete="on">
+    </p>
+
+    <p>
+      <label for="user-password" class="hidden">Password</label>
+      <input id="user-password" class="login-icon-password" type="password" name="password" placeholder="Password"
+        autocomplete="current-password">
+    </p>
+    <p class="login-password-info">
+      <input id="login-remember" type="checkbox" name="remember" class="login-checkbox__input hidden">
+      <label for="login-remember" class="login-checkbox__label">
+        Remember me
+      </label>
+      <a href="#" class="link_restore">Forgot password!</a>
+    </p>
+
+    <button class="btn" type="submit">Login</button>
+  </form>
+  <button class="modal-close modal-close_login" type="button">Close</button>
+</section>

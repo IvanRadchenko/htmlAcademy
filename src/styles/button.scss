@@ -1,0 +1,56 @@
+/* Buttons */
+.btn {
+  font: inherit;
+  display: inline-block;
+  text-align: center;
+  line-height: 43px;
+  width: 140px;
+  height: 43px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: $color-dark;
+  color: $color-white;
+
+  &__disabled,
+  &:disabled {
+    cursor: default;
+    opacity: 0.5;
+    background-color: $color-dark;
+  }
+
+  &__wide {
+    width: 100%;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $color-brown;
+  }
+
+  &.btn_gallery {
+    position: absolute;
+    box-sizing: border-box;
+  }
+
+  &__back {
+    width: 160px;
+    bottom: 0;
+  }
+
+  &__next {
+    width: 160px;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__mrg-right {
+    margin-inline-end: 20px;
+  }
+
+
+}
+
+
+

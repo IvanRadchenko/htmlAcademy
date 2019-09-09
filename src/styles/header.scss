@@ -1,0 +1,15 @@
+/* Header Styles */
+.header {
+  height: 70px;
+  background-color: $color-darkgrey;
+}
+
+.header_md-margin {
+  margin-block-end: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.header_bg-margin {
+  margin-block-end: 360px;
+}

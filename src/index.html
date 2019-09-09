@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<!--   <link rel="preload" href="./fonts/web/ptsansnarrowbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/web/ptsansnarrow.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preconnect" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="preload" href="./css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="./css/styles.css"></noscript> -->
+  <title><%= htmlWebpackPlugin.options.title %></title>
+
+</head>
+
+<body>
+  <%= require('html-loader!./partials/header.html') %>
+
+  <main class="container">
+    <h1 class="hidden">Barbershop</h1>
+
+
+    <section class="features">
+
+      <ul class="features__list">
+        <li class="features__item">
+          <h3 class="features__title">Fast</h3>
+          <p class="features__text">We'll shave you in a blink of an eye. We know you blinked! You know you are bold.
+          </p>
+        </li>
+
+
+        <li class="features__item">
+          <h3 class="features__title">Outstanding</h3>
+          <p class="features__text">Forget about your former hair styles. We'll turn you into a super star. At least
+            visually</p>
+        </li>
+
+
+        <li class="features__item">
+          <h3 class="features__title">Pricy</h3>
+          <p class="features__text">Our masters - are jedis of the fallen barber republic. To forge saber swords back,
+            you have to pay an earth. </p>
+        </li>
+      </ul>
+
+
+    </section>
+
+    <section class="main">
+      <div class="block">
+
+        <div class="block__item block__item_news">
+          <h2 class="block__title">News</h2>
+          <div class="block__container">
+            <div class="news-item">
+              <p class="news-title">Some newsSome newsSome newsSome newsSome newsSome newsSome newsSome news</p>
+              <time class="news-date">Jan 11</time>
+            </div>
+            <div class="news-item">
+              <p class="news-title">Some newsSome newsSome newsSome newsSome newsSome newsSome newsSome news</p>
+              <time class="news-date">Jan 11</time>
+            </div>
+          </div>
+          <div class="block__footer">
+            <a class="btn" href="#">All News</a>
+          </div>
+        </div>
+
+        <div class="block__item block__item_gallery">
+          <h2 class="block__title">Gallery</h2>
+          <div class="block__container block__container_gallery">
+            <img src="../images/index-gallery.jpg" alt="Some Gallery Image" width="328px" height="164px">
+            <img class="hidden" src="../images/index-gallery.jpg" alt="Some Gallery Image" width="328px" height="164px">
+            <img class="hidden" src="../images/index-gallery.jpg" alt="Some Gallery Image" width="328px" height="164px">
+          </div>
+          <div class="block__footer">
+            <button type="button" class="btn btn_gallery btn__back">Previous</button>
+            <button type="button" class="btn btn_gallery btn__next">Next</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="block">
+
+        <div class="block__item block__iteam_address">
+          <h2 class="block__title">Contacts</h2>
+          <div class="block__container">
+            <p class="block__container-text">
+              Barbershop<br>
+              address: Someplace<br>
+              telephone: 000000000<br>
+            </p>
+            <p class="block__container-text">
+              Time of work:<br>
+              mn-fr: from <br>
+              st-sun: from <br>
+            </p>
+          </div>
+          <div class="block__footer">
+            <a class="btn btn__mrg-right show-map" href="#">Route me</a>
+            <a class="btn" href="tel: 000000">Call us</a>
+          </div>
+        </div>
+
+        <div class="block__item appointment">
+          <h2 class="block__title">Pick up the date</h2>
+          <p class="appointment-info">Pickup the date and time and we'll get back to you</p>
+          <form action="#" method="post" class="appointment-form">
+            <div class="appointment-form__row">
+              <div class="appointment-item">
+                <input type="date" name="date" id="appointment-date" required>
+                <div class="appointment-label appointment-label_focused">
+                  <label for="appointment-date">Date</label>
+                </div>
+              </div>
+
+              <div class="appointment-item">
+                <input type="time" name="time" id="appointment-time" required>
+                <div class="appointment-label appointment-label_focused">
+                  <label for="appointment-time">Time</label>
+                </div>
+              </div>
+            </div>
+            <div class="appointment-form__row">
+              <div class="appointment-item">
+                <input type="text" name="name" value id="appointment-name" autocomplete="name" required>
+                <div class="appointment-label">
+                  <label for="appointment-name">Name</label>
+                </div>
+              </div>
+
+              <div class="appointment-item">
+                <input type="tel" name="phone" value placeholder="" id="appointment-phone" autocomplete="tel" required>
+                <div class="appointment-label">
+                  <label for="appointment-phone">Phone</label>
+                </div>
+              </div>
+            </div>
+            <button class="btn btn__wide" type="submit">Send</button>
+          </form>
+
+        </div>
+
+
+      </div>
+
+      </div>
+
+    </section>
+  </main>
+
+  <%= require('html-loader!./partials/footer.html') %>
+
+
+  <div class="modal-root modal-root_login">
+    <%= require('html-loader!./partials/form-login.html') %>
+    <%= require('html-loader!./partials/map.html') %>
+  </div>
+
+</body>
+
+</html>

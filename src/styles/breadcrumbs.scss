@@ -1,0 +1,43 @@
+/* Bread crumbs */
+.breadcrumbs {
+  margin-block-end: 50px;
+
+  &__title {
+    font-size: 30px;
+    line-height: 42px;
+    margin-block-end: 20px;
+    margin-block-start: 0;
+  }
+
+  &__list {
+    list-style: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    display: flex;
+  }
+
+  &__item {
+     position: relative;
+     margin-inline-end: 50px;
+  }
+
+  a {
+    color: $color-dark;
+  }
+
+  &_black::after {
+      position: absolute;
+      content: "";
+      right: -25px;
+      top: 8px;
+      transform: rotate(45deg);
+      width: 10px;
+      height: 10px;
+      background-color: $color-darkgrey;
+  }
+
+  &_white a {
+      color: $color-darkgrey;
+  }
+}

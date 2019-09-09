@@ -1,0 +1,41 @@
+/* Footer */
+.footer {
+  padding-block-start: 15px;
+  min-height: 150px;
+  background-color: $color-dark3;
+
+  &__address {
+    width: 320px;
+  }
+
+  &__address a {
+    text-decoration: underline;
+    color: $color-white;
+  }
+
+  &_txt-white {
+    color: $color-white;
+  }
+
+  /* Social links block */
+  &-address {
+    &__link {
+      color: $color-white;
+    }
+
+    &__link_underline {
+      text-decoration: underline;
+    }
+  }
+
+}
+
+.footer .container {
+  width: 960px;
+  margin: 0 auto;
+  padding-block-start: 10px;
+  padding-block-end: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}

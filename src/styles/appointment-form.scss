@@ -1,0 +1,95 @@
+/* Forms */
+.appointment-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 500px;
+
+  &__row {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.appointment-item {
+  flex: 0 0 220px;
+  display: inline-flex;
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 4px 4px 0 0;
+  overflow: visible;
+  margin: 0;
+  margin-block-end: 20px;
+  height: 54px;
+
+  input {
+    width: 100%;
+    padding: 20px 16px 6px;
+    text-transform: inherit;
+    text-decoration: inherit;
+    box-sizing: border-box;
+    border-style: none;
+    background: $color-white;
+
+    &:focus {
+      border-bottom-color: $color-white;
+      outline: none;
+    }
+  }
+}
+
+%appointment-label {
+    position: absolute;
+    bottom: 0px;
+    width: 0;
+    height: 2px;
+    background-color: $color-grey;
+    content: "";
+}
+
+.appointment-label {
+  &::before {
+    @extend %appointment-label;
+    left: 50%;
+    transition: width 0.2s;
+  }
+
+  &::after {
+    @extend %appointment-label;
+    right: 50%;
+    transition: width 0.2s;
+  }
+
+  label {
+    position: absolute;
+    left: 16px;
+    right: auto;
+    top: 16px;
+    pointer-events: none;
+    transform-origin: left top;
+    text-align: left;
+    white-space: nowrap;
+    cursor: text;
+    transition: 0.2s ease all;
+    will-change: transform;
+  }
+
+  &_focused label {
+      padding: 1px 2px;
+      font-size: 12px;
+      transform: translateY(-50%);
+
+      &::before,
+      &::after {
+         width: 50%;
+      }
+  }
+}
+
+.appointment-item input:focus~.appointment-label label {
+  padding: 1px 2px;
+  font-size: 12px;
+  transform: translateY(-50%);
+}
