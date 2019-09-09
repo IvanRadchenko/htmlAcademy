@@ -4,14 +4,14 @@
   "description": "HTML Academy Project - Course 1\r The project consists of several websites. Using git to store all of those project on separate folders as a catalog to work within same directory and setup. This is not a common sense practice, but I am completing this thus for the sake of education and revision rather then public exposure.",
   "private": true,
   "dependencies": {
-    "eslint": "^6.1.0",
+    "eslint": "^6.3.0",
     "eslint-config-htmlacademy": "^0.5.2",
     "lodash": "^4.17.15",
     "stylelint-config-htmlacademy": "^0.1.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
     "babel-loader": "^8.0.6",
     "babel-runtime": "^6.26.0",
     "clean-webpack-plugin": "^3.0.0",
@@ -22,13 +22,13 @@
     "http-server": "^0.11.1",
     "mini-css-extract-plugin": "^0.8.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
-    "sass-loader": "^7.2.0",
+    "sass-loader": "^7.3.1",
     "standard": "^13.1.0",
     "style-loader": "^1.0.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "url-loader": "^2.1.0",
-    "webpack": "^4.39.2",
-    "webpack-cli": "^3.3.6",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.8",
     "webpack-dev-server": "^3.8.0"
   },
   "scripts": {
