@@ -1,3 +1,7 @@
+import './header.js'
+import '../item.js'
+import '../catalog.js'
+
 const queryDoc = (element) => document.querySelector(element);
 const query = (targetElement, element) => targetElement.querySelector(element);
 

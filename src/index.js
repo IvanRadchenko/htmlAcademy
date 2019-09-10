@@ -1,7 +1,6 @@
 // Test import of a JavaScript function, an SVG, and Sass
-import App from './js/app'
 import  './styles/index.scss'
-import indexLogo from './images/index-logo.svg'
+import './js/app'
 import galleryImg from './images/index-gallery.jpg'
 
 
@@ -12,3 +11,5 @@ app.src = indexLogo;
 
 const gallery = document.querySelector('.block__container_gallery');
 Object.values(gallery).forEach( (img) => img.src = galleryImg);
+
+
