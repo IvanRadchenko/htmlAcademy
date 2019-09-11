@@ -8,26 +8,16 @@
     width: 320px;
   }
 
-  &__address a {
-    text-decoration: underline;
-    color: $color-white;
-  }
-
   &_txt-white {
     color: $color-white;
   }
 
-  /* Social links block */
-  &-address {
-    &__link {
-      color: $color-white;
-    }
-
-    &__link_underline {
+  &__link {
+    color: $color-white;
+    &_underline {
       text-decoration: underline;
     }
   }
-
 }
 
 .footer .container {
