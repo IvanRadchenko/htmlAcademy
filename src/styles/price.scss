@@ -41,7 +41,7 @@
 .price__items {
   position: relative;
   margin-block-end: 15px;
-  padding-inline-start: 20px;
+  padding-left: 20px;
 }
 
 .price__items::before {
@@ -124,7 +124,7 @@ td {
   list-style: none;
   margin-block-start: 0;
   margin-block-end: 0;
-  padding-inline-start: 0;
+  padding-left: 0;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -146,7 +146,7 @@ td {
 
 .descr__item {
   position: relative;
-  padding-inline-start: 20px;
+  padding-left: 20px;
 }
 
 .descr__item::before {

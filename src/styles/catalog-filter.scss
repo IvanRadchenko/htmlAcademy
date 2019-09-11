@@ -1,4 +1,8 @@
 /* Filter Form */
+%pointer {
+  cursor: pointer;
+}
+
 legend {
   padding: 0;
   margin-block-end: 15px;
@@ -14,13 +18,16 @@ fieldset {
 }
 
 .filters {
-  flex: 1 0 auto;
+   flex: 1 0 auto;
+}
+
+.filter {
 
   &-list {
       list-style: none;
       margin-block-start: 0;
       margin-block-end: 0;
-      padding-inline-start: 0;
+      padding-left: 0;
       display: flex;
       flex-direction: column;
       margin-block-start: 0;
@@ -57,16 +64,9 @@ fieldset {
 
     &_mrgbig,
     &_mrgradio {
-      padding-inline-start: 30px;
+      padding-left: 30px;
     }
   }
-
-
-
-}
-
-%pointer {
-  cursor: pointer;
 }
 
 .filter__input_checkbox+label::before {
