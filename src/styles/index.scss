@@ -4,24 +4,26 @@
 }
 
 @import 'variables';
-@import 'header';
+@import 'mixins';
 @import 'appointment-form';
+@import 'login-form';
+@import 'modal-windows';
 @import 'breadcrumbs';
 @import 'button';
+@import 'catalog';
 @import 'catalog-filter';
 @import 'catalog-item';
 @import 'catalog-pagination';
-@import 'catalog';
-@import 'copyright';
-@import 'footer';
-@import 'login-form';
-@import 'loginlink';
+@import 'header';
+@import 'header-loginlink';
+@import 'header-navigation';
 @import 'main-body';
-@import 'modal-windows';
-@import 'navigation';
 @import 'price-about';
 @import 'price';
-@import 'social';
+@import 'footer';
+@import 'footer-social';
+@import 'footer-copyright';
+@import 'item';
 
 html,
 body {
@@ -74,4 +76,47 @@ input[type="radio"].hidden {
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
+}
+
+
+/*Main container Layout */
+.main {
+  width: 960px;
+  margin: 0 auto;
+  margin-block-end: 50px;
+
+  &__title {
+    &_price {
+    position: relative;
+    font-size: 48px;
+    font-weight: $font-weigth-400;
+    line-height: 48px;
+    align-self: center;
+    margin-block-end: 40px;
+
+      &::before,
+      &::after {
+        content: '_______';
+        position: absolute;
+      }
+
+      &::before {
+        left: -200px;
+        top: -20px;
+      }
+
+      &::after {
+        left: 560px;
+        top: -20px;
+      }
+    }
+  }
+
+  &_flex {
+    display: flex;
+  }
+
+  &_flex-col {
+    flex-direction: column;
+  }
 }
