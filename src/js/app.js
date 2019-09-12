@@ -1,6 +1,7 @@
-import './header.js'
-import '../item.js'
-import '../catalog.js'
+import Item from './item.js';
+import Header from './header.js';
+import Catalog from './catalog.js';
+import addImages from './addImages.js';
 
 const queryDoc = (element) => document.querySelector(element);
 const query = (targetElement, element) => targetElement.querySelector(element);

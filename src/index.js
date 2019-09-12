@@ -1,9 +1,8 @@
 // Test import of a JavaScript function, an SVG, and Sass
-import  './styles/index.scss'
-import './js/app'
-import galleryImg from './images/index-gallery.jpg'
+import  './styles/index.scss';
+import galleryImg from './images/index-gallery.jpg';
+import App from './js/app.js';
 
-const gallery = document.querySelector('.block__container_gallery');
-Object.values(gallery).forEach( (img) => img.src = galleryImg);
+export default addImages('.block__container_gallery', galleryImg, false);
 
 
