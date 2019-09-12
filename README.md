@@ -1,5 +1,6 @@
 # htmlAcademy-1
 HTML Academy Project - Course 1
-The project consists of several websites. Using git to store all of those project on separate folders as a catalog to work within same directory and setup. This is not a common sense practice, but I am completing this thus for the sake of education and revision rather then public exposure.
-
-Consider serfing into each folder to find a fully functional seprate project.
+A small multipage website. Building in several steps.
+Step 1 - revision of HTML, CSS. Static website with no fluid design in mind even though following BEM.
+Step 2 - migration on Webpack, modular design for js, html, scss + Refactor due to numerouse step1 fails that opened up once I start thinking in a modular way (mistakes in BEM naming, leaked inheritance in few places)
+Step 3 - move to react
